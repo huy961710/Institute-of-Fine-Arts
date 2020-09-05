@@ -1,0 +1,71 @@
+﻿@model IEnumerable<Manager_competition.Models.StaffCompetition>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>List of Competitions</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>CompetitionName</th>
+            <th>StartDate</th>
+            <th>EndDate</th>
+            <th>StaffName</th>
+            <th>Action</th>
+        </tr>
+        @*<tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Competition.CompetitionId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Competition.CompetitionName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Competition.StartDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Competition.EndDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Staff.StaffName)
+            </th>
+            <th></th>
+        </tr>*@
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>@item.Competition.CompetitionId</td>
+            <td>@item.Competition.CompetitionName</td>
+            <td>@item.Competition.StartDate</td>
+            <td>@item.Competition.EndDate</td>
+            <td>@item.Staff.StaffName</td>
+            @*<td>
+            @Html.DisplayFor(modelItem => item.Competition.CompetitionId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Competition.CompetitionName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Competition.StartDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Competition.EndDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Staff.StaffId)
+        </td>*@
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Competition.CompetitionId">Edit</a> |
+                <a asp-action="Delete" asp-route-id="@item.Competition.CompetitionId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

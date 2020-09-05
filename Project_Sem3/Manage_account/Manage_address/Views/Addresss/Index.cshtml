@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Manage_address.Models.Address>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>List of Addresss</h2>
+<br />
+@Html.ActionLink("Create new Addresss", "Create", "Addresss")
+<br />
+
+<table class="table">
+    <tr>
+        <th>AddressId</th>
+        <th>StreetAddress</th>
+        <th>Country</th>
+        <th>PostalCode</th>
+        <th>City</th>
+        <th>Action</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>@item.AddressId</td>
+    <td>@item.StreetAddress</td>
+    <td>@item.Country</td>
+    <td>@item.PostalCode</td>
+    <td>@item.City</td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.AddressId })
+    </td>
+</tr>
+    }
+</table>
+
+

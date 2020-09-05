@@ -1,0 +1,31 @@
+﻿@model Manage_class.Models.Class
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit Class</h2>
+<br />
+@using (Html.BeginForm())
+{
+    <div>
+        @Html.HiddenFor(model => model.ClassId)
+    </div>
+
+    <div>
+        @Html.LabelFor(model => model.ClassName)
+        @Html.EditorFor(model => model.ClassName)
+        @Html.ValidationMessageFor(model => model.ClassName)
+    </div>
+
+    <div>
+        <input type="submit" value="Update" class="btn-warning" />
+    </div>
+}
+
+<div>
+    <h3 style="color:darkblue">@ViewBag.Msg</h3>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>

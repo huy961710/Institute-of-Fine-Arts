@@ -1,0 +1,47 @@
+﻿@model Manage_account.Models.Account
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create new Account</h2>
+
+<hr />
+
+@using (Html.BeginForm())
+{
+<div>
+    <div>
+        @Html.LabelFor(model => model.AccId)
+        @Html.EditorFor(model => model.AccId)
+        @Html.ValidationMessageFor(model => model.AccId)
+    </div>
+    <div>
+        @Html.LabelFor(model => model.AccPass)
+        @Html.EditorFor(model => model.AccPass)
+        @Html.ValidationMessageFor(model => model.AccPass)
+    </div>
+    <div>
+        @Html.LabelFor(model => model.AccRole)
+        @Html.EditorFor(model => model.AccRole)
+        @Html.ValidationMessageFor(model => model.AccRole)
+    </div>
+    <div>
+        @Html.LabelFor(model => model.Active)
+        @Html.CheckBoxFor(model => model.Active)
+    </div>
+    <br />
+    <div>
+        <input type="submit" value="Create" class="btn-primary" />
+    </div>
+</div>
+    <div><br /></div>
+}
+
+<div>
+    <h3>@ViewBag.Msg</h3>
+</div>
+
+<div>
+    @Html.ActionLink("Back to list ", "Index", "Accounts")
+</div>

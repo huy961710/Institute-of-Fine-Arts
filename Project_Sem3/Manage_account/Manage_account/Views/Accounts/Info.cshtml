@@ -1,0 +1,30 @@
+﻿@model Manage_account.Models.Account
+@{
+    ViewData["Title"] = "Info";
+}
+
+<h2>Personal Info</h2>
+<hr />
+
+<div class="container">
+    <div>
+        <label>AccId: </label>
+        @Html.ValueFor(model => model.AccId)
+    </div>
+    <div>
+        <label>AccPass: </label>
+        @Html.ValueFor(model => model.AccPass)
+    </div>
+    <div>
+        <label>AccRole: </label>
+        @Html.ValueFor(model => model.AccRole)
+    </div>
+    <div>
+        <label>Active: </label>
+        @Html.ValueFor(model => model.Active)
+    </div>
+</div>
+
+<div>
+    <a asp-action="Login">Back to Login</a>
+</div>
