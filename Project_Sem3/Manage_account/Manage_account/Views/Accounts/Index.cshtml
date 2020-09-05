@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Manage_account.Models.Account>
+@using Microsoft.AspNetCore.Http
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div>
+    <h3>Welcome, @Context.Session.GetString("ename")</h3>
+</div>
+<br />
+@Html.ActionLink("Logout", "Logout", "Accounts")
+<br /><br />
+<h2>Account List</h2>
+<br />
+@Html.ActionLink("Create new Account", "Create", "Accounts")
+<br />
+
+<table class="table">
+    <tr>
+        <th>AccId</th>
+        <th>AccPass</th>
+        <th>AccRole</th>
+        <th>Active</th>
+        <th>Action</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.AccId</td>
+            <td>@item.AccPass</td>
+            <td>@item.AccRole</td>
+            <td>@item.Active</td>
+            <td>
+                @Html.ActionLink("Remove", "Delete", new { id = item.AccId }, new { onClick = "return confirm('Are you sure?')" }) |
+                @Html.ActionLink("Edit", "Edit", new { id = item.AccId })
+            </td>
+        </tr>
+    }
+</table>
+
+<div>
+    <a asp-action="Login">Back to Login</a>
+</div>
+

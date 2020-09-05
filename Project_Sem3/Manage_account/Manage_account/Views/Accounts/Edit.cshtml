@@ -1,0 +1,40 @@
+﻿@model Manage_account.Models.Account
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit Account</h2>
+<br />
+@using (Html.BeginForm())
+{
+<div>
+    <div>
+        @Html.HiddenFor(model => model.AccId)
+    </div>
+
+    <div>
+        @Html.HiddenFor(model => model.AccPass)
+    </div>
+
+    <div>
+        @Html.HiddenFor(model => model.AccRole)
+    </div>
+
+    <div>
+        @Html.LabelFor(model => model.Active)
+        @Html.CheckBoxFor(model => model.Active)
+    </div>
+    <br />
+    <div>
+        <input type="submit" value="Update" class="btn-warning" />
+    </div>
+</div>
+}
+
+<div>
+    <h3 style="color:darkblue">@ViewBag.Msg</h3>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
