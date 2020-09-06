@@ -19,8 +19,15 @@ namespace Manage_staff.Controllers
 
         public IActionResult Index()
         {
-            IEnumerable<Staff> list = db.Staff.ToList();
-            return View(list);
+            if (HttpContext.Session.GetString("ename") == null)
+            {
+                return RedirectToAction("Login");
+            }
+            else
+            {
+                IEnumerable<Staff> list = db.Staff.ToList();
+                return View(list);
+            }
         }
 
         [HttpGet]
@@ -43,6 +50,8 @@ namespace Manage_staff.Controllers
                         file.CopyToAsync(stream);
                         staff.ProfileImage = "images/" + file.FileName;
 
+                        var key = "b14ca5898a4e4133bbce2ea2315a1916";
+                        staff.Password = AesEncDesc.EncryptString(key, staff.Password);
                         db.Staff.Add(staff);
                         db.SaveChanges();
                         return RedirectToAction("Index", "Staffs");
@@ -111,37 +120,89 @@ namespace Manage_staff.Controllers
             return View();
         }
 
+        [HttpGet]
+        public IActionResult Login()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Login(string accName, string accPass)
+        {
+            try
+            {
+                var staff = db.Staff.SingleOrDefault(s => s.StaffId.Equals(accName));
+                if (staff != null)
+                {
+                    HttpContext.Session.SetString("ename", accName);
+                    var key = "b14ca5898a4e4133bbce2ea2315a1916";
+                    staff.Password = AesEncDesc.DecryptString(key, staff.Password);
+                    if (staff.Password.Equals(accPass))
+                    {
+                        if (staff.Role == 0)
+                        {
+                            return RedirectToAction("Index");
+                        }
+                        else
+                        {
+                            return RedirectToAction("Info", staff);
+                        }
+                    }
+                    else
+                    {
+                        ViewBag.Msg = "Invalid Pasword....";
+                    }
+                }
+                else
+                {
+                    ViewBag.Msg = "Invalid Username....";
+                }
+            }
+            catch (Exception e)
+            {
+                ViewBag.Msg = e.Message;
+            }
+            return View();
+        }
+
         public IActionResult Delete(string id)
         {
             try
             {
                 var staff = db.Staff.SingleOrDefault(s => s.StaffId.Equals(id));
-                //List<Competition> competition = db.Competition.ToList();
-                //var com = competition.SingleOrDefault(c => c.StaffId.Equals(id));
-                //List<Award> award = db.Award.ToList();
-                //var awa = competition.SingleOrDefault(a => a.StaffId.Equals(id));
-                //List<Remark> remark = db.Remark.ToList();
-                //var rmk = competition.SingleOrDefault(r => r.StaffId.Equals(id));
-                //List<Exhibition> exhibition = db.Exhibition.ToList();
-                //var exh = competition.SingleOrDefault(e => e.StaffId.Equals(id));
-                //List<Posting> posting = db.Posting.ToList();
-                //var pst = competition.SingleOrDefault(p => p.StaffId.Equals(id));
 
                 if (staff != null)
                 {
                    db.Staff.Remove(staff);
                    db.SaveChanges();
                    return RedirectToAction("Index");
-                }
-                else
-                {
-                   return View();
-                }
+                }    
             }
             catch (Exception)
             {
                 throw;
             }
+            return View();
+        }
+
+        public IActionResult Info(Staff staff)
+        {
+            if (staff != null)
+            {
+                return View(staff);
+            }
+            return View();
+        }
+
+        public IActionResult Logout()
+        {
+            var model = HttpContext.Session.GetString("ename");
+            if(model!=null)
+            {
+                HttpContext.Session.Clear();
+                return RedirectToAction("Login");
+
+            }
+            return RedirectToAction("Index");
         }
     }
 }

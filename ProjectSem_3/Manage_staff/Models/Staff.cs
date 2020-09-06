@@ -40,11 +40,5 @@ namespace Manage_staff.Models
         [Required(ErrorMessage = "Role is required.....")]
         [Range(0, 2, ErrorMessage = "Role must be from 0 to 2")]
         public int Role { get; set; }
-
-        public ICollection<Competition> Competition { get; set; }
-        public ICollection<Award> Award { get; set; }
-        public ICollection<Posting> Posting { get; set; }
-        public ICollection<Exhibition> Exhibition { get; set; }
-        public ICollection<Remark> Remark { get; set; }
     }
 }

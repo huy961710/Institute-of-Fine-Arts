@@ -31,14 +31,15 @@ namespace Manage_competition.Controllers
 
         public IActionResult Create()
         {
-            List<Staff> list = db.Staffs.ToList();
+            var list = db.Staffs.Where(s=>s.Role.Equals(2));
             ViewBag.data = new SelectList(list, "StaffId", "StaffName");
             return View();
         }
         [HttpPost]
         public IActionResult Create(Competition competition)
         {
-            List<Staff> list = db.Staffs.ToList();
+            var list = db.Staffs.Where(s => s.Role.Equals(2));
+            //List<Staff> list = db.Staffs.ToList();
             ViewBag.data = new SelectList(list, "StaffId", "StaffName");
 
             try
@@ -63,7 +64,8 @@ namespace Manage_competition.Controllers
 
         public IActionResult Edit(int id)
         {
-            List<Staff> list = db.Staffs.ToList();
+            var list = db.Staffs.Where(s => s.Role.Equals(1) || s.Role.Equals(2));
+            //List<Staff> list = db.Staffs.ToList();
             ViewBag.data = new SelectList(list, "StaffId", "StaffName");
 
             var comp = db.Competitions.Find(id);
@@ -79,7 +81,8 @@ namespace Manage_competition.Controllers
         [HttpPost]
         public IActionResult Edit(Competition competition)
         {
-            List<Staff> list = db.Staffs.ToList();
+            var list = db.Staffs.Where(s => s.Role.Equals(1) || s.Role.Equals(2));
+            //List<Staff> list = db.Staffs.ToList();
             ViewBag.data = new SelectList(list, "StaffId", "StaffName");
 
             try

@@ -10,10 +10,5 @@ namespace Manage_staff.Models
     {
         public StaffDB(DbContextOptions options) : base(options) { }
         public DbSet<Staff> Staff { get; set; }
-        public DbSet<Competition> Competition { get; set; }
-        public DbSet<Award> Award { get; set; }
-        public DbSet<Remark> Remark { get; set; }
-        public DbSet<Posting> Posting { get; set; }
-        public DbSet<Exhibition> Exhibition { get; set; }
     }
 }
