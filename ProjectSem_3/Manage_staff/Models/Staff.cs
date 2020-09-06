@@ -22,8 +22,10 @@ namespace Manage_staff.Models
         public string StaffName { get; set; }
         [Required(ErrorMessage = "Password is required.....")]
         [StringLength(50, MinimumLength = 5, ErrorMessage = "Password must be from 5 to 50 characters")]
+        [DataType(DataType.Password)]
         public string Password { get; set; }
         [Required(ErrorMessage = "JoinDate is required.....")]
+        [DataType(DataType.Date)]
         public DateTime JoinDate { get; set; }
         public string ProfileImage { get; set; }
         [Required(ErrorMessage = "Email is required.....")]
@@ -38,5 +40,11 @@ namespace Manage_staff.Models
         [Required(ErrorMessage = "Role is required.....")]
         [Range(0, 2, ErrorMessage = "Role must be from 0 to 2")]
         public int Role { get; set; }
+
+        public ICollection<Competition> Competition { get; set; }
+        public ICollection<Award> Award { get; set; }
+        public ICollection<Posting> Posting { get; set; }
+        public ICollection<Exhibition> Exhibition { get; set; }
+        public ICollection<Remark> Remark { get; set; }
     }
 }
