@@ -53,7 +53,7 @@ namespace Manage_staff
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Staffs}/{action=Login}/{id?}");
+                    pattern: "{controller=Staffs}/{action=Index}/{id?}");
             });
         }
     }

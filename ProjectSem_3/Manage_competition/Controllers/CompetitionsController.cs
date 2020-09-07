@@ -99,7 +99,7 @@ namespace Manage_competition.Controllers
                         editCompetition.StaffId = competition.StaffId;
 
                         DateTime editenddate = Convert.ToDateTime(competition.EndDate);
-                        DateTime editstartdate = Convert.ToDateTime(competition.StartDate);
+                        DateTime editstartdate = Convert.ToDateTime(editCompetition.StartDate);
                         DateTime today = Convert.ToDateTime(DateTime.Today);
                         TimeSpan time = editenddate - editstartdate;
                         TimeSpan timetoday = editstartdate - today;

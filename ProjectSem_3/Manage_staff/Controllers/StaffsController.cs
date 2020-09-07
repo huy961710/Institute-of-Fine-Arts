@@ -48,7 +48,7 @@ namespace Manage_staff.Controllers
                         string path = Path.Combine("wwwroot/images", file.FileName);
                         var stream = new FileStream(path, FileMode.Create);
                         file.CopyToAsync(stream);
-                        staff.ProfileImage = "images/" + file.FileName;
+                        staff.ProfileImage = "../images/" + file.FileName;
 
                         var key = "b14ca5898a4e4133bbce2ea2315a1916";
                         staff.Password = AesEncDesc.EncryptString(key, staff.Password);
@@ -98,7 +98,7 @@ namespace Manage_staff.Controllers
                             string path = Path.Combine("wwwroot/images", file.FileName);
                             var stream = new FileStream(path, FileMode.Create);
                             file.CopyToAsync(stream);
-                            editStaff.ProfileImage = "images/" + file.FileName;
+                            editStaff.ProfileImage = "../images/" + file.FileName;
 
                             editStaff.Email = staff.Email;
                             editStaff.Phone = staff.Phone;
@@ -179,7 +179,7 @@ namespace Manage_staff.Controllers
             }
             catch (Exception)
             {
-                throw;
+                return BadRequest("Cannot delete object that is existed in other tables");
             }
             return View();
         }
@@ -196,7 +196,7 @@ namespace Manage_staff.Controllers
         public IActionResult Logout()
         {
             var model = HttpContext.Session.GetString("ename");
-            if(model!=null)
+            if (model != null)
             {
                 HttpContext.Session.Clear();
                 return RedirectToAction("Login");
