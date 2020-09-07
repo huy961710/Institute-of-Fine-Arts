@@ -5,7 +5,11 @@ VisualStudioVersion = 16.0.30330.147
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Manage_staff", "Manage_staff\Manage_staff.csproj", "{7AB51BD5-8C54-41E3-8A3C-E21FFA6BF655}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Manage_competition", "Manage_competition\Manage_competition.csproj", "{72249E77-D131-4681-A49F-76D177CF4050}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Manage_competition", "Manage_competition\Manage_competition.csproj", "{72249E77-D131-4681-A49F-76D177CF4050}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Manage_student", "Manage_student\Manage_student.csproj", "{BB1FD688-FC08-4800-933A-58DFD285A5FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Manage_design", "Manage_design\Manage_design.csproj", "{5663164E-8949-419E-878C-FF55A0B0957D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{72249E77-D131-4681-A49F-76D177CF4050}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{72249E77-D131-4681-A49F-76D177CF4050}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{72249E77-D131-4681-A49F-76D177CF4050}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB1FD688-FC08-4800-933A-58DFD285A5FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB1FD688-FC08-4800-933A-58DFD285A5FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB1FD688-FC08-4800-933A-58DFD285A5FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB1FD688-FC08-4800-933A-58DFD285A5FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5663164E-8949-419E-878C-FF55A0B0957D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5663164E-8949-419E-878C-FF55A0B0957D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5663164E-8949-419E-878C-FF55A0B0957D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5663164E-8949-419E-878C-FF55A0B0957D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

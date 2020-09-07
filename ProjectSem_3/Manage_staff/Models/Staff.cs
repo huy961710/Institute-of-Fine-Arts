@@ -6,6 +6,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 using System.Xml.Linq;
 using Microsoft.VisualBasic;
+using System.ComponentModel;
 
 namespace Manage_staff.Models
 {
@@ -14,7 +15,7 @@ namespace Manage_staff.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        [Required(ErrorMessage = "StaffId is required.....")]
+        [Required(ErrorMessage = "StaffId is required.....")]        
         [StringLength(10, MinimumLength = 3, ErrorMessage = "AccId must be from 3 to 10 characters")]
         public string StaffId { get; set; }
         [Required(ErrorMessage = "StaffName is required.....")]
