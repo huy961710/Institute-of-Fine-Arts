@@ -97,7 +97,7 @@ namespace Manage_exhibition.Controllers
                         editExhibition.StaffId = exhibition.StaffId;
 
                         DateTime editenddate = Convert.ToDateTime(exhibition.EndDate);
-                        DateTime editstartdate = Convert.ToDateTime(exhibition.StartDate);
+                        DateTime editstartdate = Convert.ToDateTime(editExhibition.StartDate);
                         DateTime today = Convert.ToDateTime(DateTime.Today);
                         TimeSpan time = editenddate - editstartdate;
                         TimeSpan timetoday = editstartdate - today;
