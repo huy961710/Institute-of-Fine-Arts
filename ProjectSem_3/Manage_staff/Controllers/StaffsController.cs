@@ -25,7 +25,7 @@ namespace Manage_staff.Controllers
             }
             else
             {
-                IEnumerable<Staff> list = db.Staff.ToList();
+                var list = db.Staff.ToList();
                 return View(list);
             }
         }
