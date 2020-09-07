@@ -50,20 +50,26 @@
         </tr>
         <tr>
             <td>@Html.LabelFor(s => s.JoinDate)</td>
-            <td colspan="1">
+            <td>
                 @Html.EditorFor(s=>s.JoinDate)
             </td>
+            <td>@Html.ValidationMessageFor(s=>s.JoinDate)</td>
         </tr>
         <tr>
             <td>@Html.LabelFor(s => s.Address)</td>
             <td>@Html.EditorFor(s => s.Address)</td>
             <td>@Html.ValidationMessageFor(s => s.Address)</td>
         </tr>
-        @*<tr>
+        <tr>
             <td>@Html.LabelFor(s => s.ProfileImage)</td>
             <td colspan="1">
                 <input type="file" name="file" />
             </td>
+        </tr>
+        @*<tr>
+            <td>@Html.LabelFor(s=>s.CompetitionId)</td>
+            <td>@Html.EditorFor(s=>s.CompetitionId)</td>
+            <td>@Html.ValidationMessageFor(s=>s.CompetitionId)</td>
         </tr>*@
         <tr>
             <td><input type="submit" value="Save" class="btn-primary" /></td>

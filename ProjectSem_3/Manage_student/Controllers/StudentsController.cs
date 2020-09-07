@@ -8,6 +8,7 @@ using Manage_student.Models;
 using Microsoft.AspNetCore.Http;
 using System.IO;
 
+
 namespace Manage_student.Controllers
 {
     public class StudentsController : Controller
@@ -22,8 +23,14 @@ namespace Manage_student.Controllers
         //step 3
         public IActionResult Index()
         {
-            IEnumerable<Student> list = db.Student.ToList();
-            return View(list);
+            //if (HttpContext.Session.GetString("ename") == null)
+            //{
+            //    return RedirectToAction("Login");
+            //}
+            //{
+                IEnumerable<Student> list = db.Student.ToList();
+                return View(list);
+            //}
         }
 
         //Login
@@ -46,6 +53,7 @@ namespace Manage_student.Controllers
                         model.Password = AesEncDesc.DecryptString(key, model.Password);
                         if (model.Password.Equals(studentUser.Password))
                         {
+                            //HttpContext.Session.SetString("ename", studentUser.StudentId); //session
                             return RedirectToAction("Index");
                         }
                         else
@@ -79,23 +87,23 @@ namespace Manage_student.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    //if(file.Length > 0)
-                    //{
-                    //    string path = Path.Combine("wwwroot/images", file.FileName);
-                    //    var stream = new FileStream(path, FileMode.Create);
-                    //    file.CopyToAsync(stream);
-                    //    student.ProfileImage = "images/" + file.FileName;
+                    if (file.Length > 0)
+                    {
+                        string path = Path.Combine("wwwroot/images", file.FileName);
+                        var stream = new FileStream(path, FileMode.Create);
+                        file.CopyToAsync(stream);
+                        student.ProfileImage = "images/" + file.FileName;
 
-                    var key = "b14ca5898a4e4133bbce2ea2315a1916";
+                        var key = "b14ca5898a4e4133bbce2ea2315a1916";
                     student.Password = AesEncDesc.EncryptString(key, student.Password);
                         db.Student.Add(student);
                         db.SaveChanges();
                         return RedirectToAction("Index", "Students");
-                    //}
-                    //else
-                    //{
-                    //    ViewBag.Msg = "Failed";
-                    //}
+                    }
+                    else
+                    {
+                        ViewBag.Msg = "Failed";
+                    }
                 }
                 {
                     ViewBag.Msg = "Missing some thing";
@@ -160,13 +168,11 @@ namespace Manage_student.Controllers
                     {
                         model.ProfileImage = student.ProfileImage;
 
-                        //if (file.Length > 0)
-                        //{
-                        //    string path = Path.Combine("wwwroot/images", file.FileName);
-                        //    var stream = new FileStream(path, FileMode.Create);
-                        //    file.CopyToAsync(stream);
-                            //model.ProfileImage = "images/" + file.FileName;
-
+                        if (file.Length > 0)
+                        {
+                            string path = Path.Combine("wwwroot/images", file.FileName);
+                            var stream = new FileStream(path, FileMode.Create);
+                            file.CopyToAsync(stream);                       
                             model.Password = student.Password;
                             model.FirstName = student.FirstName;
                             model.LastName = student.LastName;
@@ -174,12 +180,13 @@ namespace Manage_student.Controllers
                             model.Gender = student.Gender;
                             model.Phone = student.Phone;
                             model.Email = student.Email;
-                            //model.JoinDate = student.JoinDate;
+                            model.JoinDate = student.JoinDate;
                             model.Address = student.Address;
-                            model.CompetitionId = student.CompetitionId;
+                            student.ProfileImage = "images/" + file.FileName;
+                            //model.CompetitionId = student.CompetitionId;
                             db.SaveChanges();
                             return RedirectToAction("Index", "Students");
-                        //}
+                        }
                     }
                     else
                     {
