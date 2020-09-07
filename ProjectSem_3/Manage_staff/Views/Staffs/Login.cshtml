@@ -1,0 +1,29 @@
+﻿@model Manage_staff.Models.Staff
+@{
+    ViewData["Title"] = "Login";
+}
+
+<h2>Login Page</h2>
+
+@using (Html.BeginForm())
+{
+    <div>
+        <div>
+            <input type="text" name="accName" placeholder="Enter Username" />
+            @Html.ValidationMessageFor(model => model.StaffId)
+        </div>
+
+        <div>
+            <input type="password" name="accPass" placeholder="Enter Pasword" />
+            @Html.ValidationMessageFor(model => model.Password)
+        </div>
+        <br />
+        <div>
+            <input type="submit" value="Sign In" class="btn-success" />
+        </div>
+    </div>
+}
+
+<div>
+    <h3 style="color:red">@ViewBag.Msg</h3>
+</div>

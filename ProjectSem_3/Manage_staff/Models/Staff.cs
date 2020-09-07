@@ -22,8 +22,10 @@ namespace Manage_staff.Models
         public string StaffName { get; set; }
         [Required(ErrorMessage = "Password is required.....")]
         [StringLength(50, MinimumLength = 5, ErrorMessage = "Password must be from 5 to 50 characters")]
+        [DataType(DataType.Password)]
         public string Password { get; set; }
         [Required(ErrorMessage = "JoinDate is required.....")]
+        [DataType(DataType.Date)]
         public DateTime JoinDate { get; set; }
         public string ProfileImage { get; set; }
         [Required(ErrorMessage = "Email is required.....")]

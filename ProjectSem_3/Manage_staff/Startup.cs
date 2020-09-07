@@ -39,6 +39,7 @@ namespace Manage_staff
             {
                 app.UseExceptionHandler("/Home/Error");
             }
+
             app.UseStaticFiles();
 
             app.UseRouting();
@@ -49,7 +50,7 @@ namespace Manage_staff
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Staffs}/{action=Index}/{id?}");
+                    pattern: "{controller=Staffs}/{action=Login}/{id?}");
             });
         }
     }
