@@ -26,7 +26,6 @@ namespace Manage_competition
         {
             services.AddDbContext<CompetitionDB>(option => option.UseSqlServer("server=LAPTOP-7V8JH7QF;database=Project03;Trusted_Connection=true"));
             services.AddControllersWithViews();
-            services.AddControllersWithViews();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

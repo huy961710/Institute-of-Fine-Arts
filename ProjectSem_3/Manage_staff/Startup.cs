@@ -24,6 +24,7 @@ namespace Manage_staff
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddSession();
             services.AddDbContext<StaffDB>(option => option.UseSqlServer("server=LAPTOP-7V8JH7QF;database=Project03;Trusted_Connection=true"));
             services.AddControllersWithViews();
         }
@@ -39,6 +40,8 @@ namespace Manage_staff
             {
                 app.UseExceptionHandler("/Home/Error");
             }
+
+            app.UseSession();
 
             app.UseStaticFiles();
 
