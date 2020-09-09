@@ -1,0 +1,38 @@
+﻿@model IEnumerable<Manage_award.Models.AwardStaffCompetitionPosting>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>List of Awards</h2>
+
+<p>
+    <a asp-action="Create">Create New Award</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>AwardName</th>
+            <th>CompetitionName</th>
+            <th>PostTime</th>
+            <th>StaffName</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Award.AwardId</td>
+                <td>@item.Award.AwardName</td>
+                <td>@item.Competition.CompetitionName</td>
+                <td>@item.Posting.PostDate</td>
+                <td>@item.Staff.StaffName</td>
+                <td>
+                    @Html.ActionLink("Update", "Edit", new { id = item.Award.AwardId })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
