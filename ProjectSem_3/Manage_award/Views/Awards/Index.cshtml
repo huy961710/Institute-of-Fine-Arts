@@ -17,7 +17,6 @@
             <th>CompetitionName</th>
             <th>PostTime</th>
             <th>StaffName</th>
-            <th>Action</th>
         </tr>
     </thead>
     <tbody>
@@ -29,9 +28,6 @@
                 <td>@item.Competition.CompetitionName</td>
                 <td>@item.Posting.PostDate</td>
                 <td>@item.Staff.StaffName</td>
-                <td>
-                    @Html.ActionLink("Update", "Edit", new { id = item.Award.AwardId })
-                </td>
             </tr>
         }
     </tbody>

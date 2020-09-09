@@ -16,6 +16,7 @@ namespace Manage_posting.Models
         public DateTime PostDate { get; set; }
         public string PostDescription { get; set; }
         public string Mark { get; set; }
+        [DataType(DataType.MultilineText)]
         public string Remark { get; set; }
         [Required]
         public int DesignId { get; set; }

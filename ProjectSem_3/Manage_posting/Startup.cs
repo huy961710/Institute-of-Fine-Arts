@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.EntityFrameworkCore;
+using Manage_posting.Models;
 
 namespace Manage_posting
 {
@@ -22,6 +24,7 @@ namespace Manage_posting
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<PostingDB>(option => option.UseSqlServer("server=LAPTOP-7V8JH7QF;database=Project03;Trusted_Connection=true"));
             services.AddControllersWithViews();
         }
 
@@ -46,7 +49,7 @@ namespace Manage_posting
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Postings}/{action=Index}/{id?}");
             });
         }
     }
