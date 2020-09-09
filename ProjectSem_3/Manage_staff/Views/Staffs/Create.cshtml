@@ -56,7 +56,7 @@
 
     <div>
         @Html.LabelFor(model => model.Role)
-        @Html.EditorFor(model => model.Role)
+        <input type="number" min="0" max="2" /> 
         @Html.ValidationMessageFor(model => model.Role)
     </div>
     <br />

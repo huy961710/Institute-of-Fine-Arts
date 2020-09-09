@@ -2,7 +2,6 @@ D:\FPT\ProjectSem_3\Manage_staff\bin\Debug\netcoreapp3.1\appsettings.Development
 D:\FPT\ProjectSem_3\Manage_staff\bin\Debug\netcoreapp3.1\appsettings.json
 D:\FPT\ProjectSem_3\Manage_staff\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 D:\FPT\ProjectSem_3\Manage_staff\bin\Debug\netcoreapp3.1\Manage_staff.exe
-D:\FPT\ProjectSem_3\Manage_staff\obj\Debug\netcoreapp3.1\Manage_staff.csprojAssemblyReference.cache
 D:\FPT\ProjectSem_3\Manage_staff\obj\Debug\netcoreapp3.1\Manage_staff.AssemblyInfoInputs.cache
 D:\FPT\ProjectSem_3\Manage_staff\obj\Debug\netcoreapp3.1\Manage_staff.AssemblyInfo.cs
 D:\FPT\ProjectSem_3\Manage_staff\obj\Debug\netcoreapp3.1\Manage_staff.RazorAssemblyInfo.cache
@@ -149,3 +148,7 @@ D:\FPT\ProjectSem_3\Manage_staff\obj\Debug\netcoreapp3.1\Manage_staff.pdb
 D:\FPT\ProjectSem_3\Manage_staff\obj\Debug\netcoreapp3.1\Manage_staff.genruntimeconfig.cache
 D:\FPT\ProjectSem_3\Manage_staff\obj\Debug\netcoreapp3.1\Razor\Views\Staffs\Index.cshtml.g.cs
 D:\FPT\ProjectSem_3\Manage_staff\obj\Debug\netcoreapp3.1\Razor\Views\Staffs\Create.cshtml.g.cs
+D:\FPT\ProjectSem_3\Manage_staff\obj\Debug\netcoreapp3.1\Razor\Views\Staffs\Edit.cshtml.g.cs
+D:\FPT\ProjectSem_3\Manage_staff\obj\Debug\netcoreapp3.1\Manage_staff.csprojAssemblyReference.cache
+D:\FPT\ProjectSem_3\Manage_staff\obj\Debug\netcoreapp3.1\Razor\Views\Staffs\Info.cshtml.g.cs
+D:\FPT\ProjectSem_3\Manage_staff\obj\Debug\netcoreapp3.1\Razor\Views\Staffs\Login.cshtml.g.cs
