@@ -1,0 +1,42 @@
+﻿@model Student_Design_Posting.Models.Competition
+
+@{
+    ViewData["Title"] = "ViewCompetitionPage";
+}
+
+<h1>ViewCompetitionPage</h1>
+
+<div>
+    <h4>Competition</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-lg-2">
+            @Html.DisplayNameFor(model => model.CompetitionName)
+        </dt>
+        <dd class = "col-lg-10">
+            @Html.DisplayFor(model => model.CompetitionName)
+        </dd>
+        <dt class = "col-lg-2">
+            @Html.DisplayNameFor(model => model.StartDate)
+        </dt>   
+        <dd class = "col-lg-10">
+            @Html.DisplayFor(model => model.StartDate)
+        </dd>
+        <dt class = "col-lg-2">
+        </dt>
+            @Html.DisplayNameFor(model => model.EndDate)
+        <dd class = "col-lg-10">
+            @Html.DisplayFor(model => model.EndDate)
+        </dd>
+        <dt class = "col-lg-2">
+            @Html.DisplayNameFor(model => model.StaffId)
+        </dt>
+        <dd class = "col-lg-10">
+            @Html.DisplayFor(model => model.StaffId)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.CompetitionId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
