@@ -16,7 +16,7 @@ namespace Manage_posting.Models
         [Required]
         public string DesignName { get; set; }
         [Required]
-        public string Panting { get; set; }
+        public string Painting { get; set; }
         [Required]
         public string Description { get; set; }
         [Required]
