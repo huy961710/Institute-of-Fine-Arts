@@ -8404,19 +8404,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Phat Developer King\\.nuget\\packages\\": {}
+    "C:\\Users\\USER\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\ProjectSem_3\\Manage_student\\Manage_student.csproj",
+      "projectUniqueName": "C:\\Users\\USER\\Desktop\\Institute-of-Fine-Arts\\ProjectSem_3\\Manage_student\\Manage_student.csproj",
       "projectName": "Manage_student",
-      "projectPath": "D:\\ProjectSem_3\\Manage_student\\Manage_student.csproj",
-      "packagesPath": "C:\\Users\\Phat Developer King\\.nuget\\packages\\",
-      "outputPath": "D:\\ProjectSem_3\\Manage_student\\obj\\",
+      "projectPath": "C:\\Users\\USER\\Desktop\\Institute-of-Fine-Arts\\ProjectSem_3\\Manage_student\\Manage_student.csproj",
+      "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\USER\\Desktop\\Institute-of-Fine-Arts\\ProjectSem_3\\Manage_student\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Phat Developer King\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8471,7 +8475,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
       }
     }
   }
