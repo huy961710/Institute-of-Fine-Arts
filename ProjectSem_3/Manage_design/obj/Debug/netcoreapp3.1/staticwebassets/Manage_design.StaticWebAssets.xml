@@ -1,1 +1,3 @@
-﻿<StaticWebAssets Version="1.0" />
+﻿<StaticWebAssets Version="1.0">
+  <ContentRoot BasePath="_content/Manage_competition" Path="C:\Users\Phat Developer King\Desktop\clone\Institute-of-Fine-Arts\ProjectSem_3\Manage_competition\wwwroot\" />
+</StaticWebAssets>

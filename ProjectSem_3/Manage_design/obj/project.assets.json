@@ -2546,6 +2546,24 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
+      },
+      "Manage_competition/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "3.1.7",
+          "Microsoft.EntityFrameworkCore.SqlServer": "3.1.7",
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "3.1.4"
+        },
+        "compile": {
+          "bin/placeholder/Manage_competition.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Manage_competition.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       }
     }
   },
@@ -8394,13 +8412,16 @@
         "system.xml.xmlserializer.4.3.0.nupkg.sha512",
         "system.xml.xmlserializer.nuspec"
       ]
+    },
+    "Manage_competition/1.0.0": {
+      "type": "project",
+      "path": "../Manage_competition/Manage_competition.csproj",
+      "msbuildProject": "../Manage_competition/Manage_competition.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "Microsoft.EntityFrameworkCore >= 3.1.7",
-      "Microsoft.EntityFrameworkCore.SqlServer >= 3.1.7",
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.1.4"
+      "Manage_competition >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -8409,11 +8430,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Phat Developer King\\Desktop\\Project\\ProjectSem_3\\Manage_design\\Manage_design.csproj",
+      "projectUniqueName": "C:\\Users\\Phat Developer King\\Desktop\\clone\\Institute-of-Fine-Arts\\ProjectSem_3\\Manage_design\\Manage_design.csproj",
       "projectName": "Manage_design",
-      "projectPath": "C:\\Users\\Phat Developer King\\Desktop\\Project\\ProjectSem_3\\Manage_design\\Manage_design.csproj",
+      "projectPath": "C:\\Users\\Phat Developer King\\Desktop\\clone\\Institute-of-Fine-Arts\\ProjectSem_3\\Manage_design\\Manage_design.csproj",
       "packagesPath": "C:\\Users\\Phat Developer King\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Phat Developer King\\Desktop\\Project\\ProjectSem_3\\Manage_design\\obj\\",
+      "outputPath": "C:\\Users\\Phat Developer King\\Desktop\\clone\\Institute-of-Fine-Arts\\ProjectSem_3\\Manage_design\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Phat Developer King\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -8428,7 +8449,11 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Phat Developer King\\Desktop\\clone\\Institute-of-Fine-Arts\\ProjectSem_3\\Manage_competition\\Manage_competition.csproj": {
+              "projectPath": "C:\\Users\\Phat Developer King\\Desktop\\clone\\Institute-of-Fine-Arts\\ProjectSem_3\\Manage_competition\\Manage_competition.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -8439,20 +8464,6 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore": {
-            "target": "Package",
-            "version": "[3.1.7, )"
-          },
-          "Microsoft.EntityFrameworkCore.SqlServer": {
-            "target": "Package",
-            "version": "[3.1.7, )"
-          },
-          "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
-            "target": "Package",
-            "version": "[3.1.4, )"
-          }
-        },
         "imports": [
           "net461",
           "net462",

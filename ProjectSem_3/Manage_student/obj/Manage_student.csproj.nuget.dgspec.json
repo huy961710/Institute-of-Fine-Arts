@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Phat Developer King\\Desktop\\Project\\ProjectSem_3\\Manage_student\\Manage_student.csproj": {}
+    "C:\\Users\\Phat Developer King\\Desktop\\clone\\Institute-of-Fine-Arts\\ProjectSem_3\\Manage_student\\Manage_student.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Phat Developer King\\Desktop\\Project\\ProjectSem_3\\Manage_student\\Manage_student.csproj": {
+    "C:\\Users\\Phat Developer King\\Desktop\\clone\\Institute-of-Fine-Arts\\ProjectSem_3\\Manage_competition\\Manage_competition.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Phat Developer King\\Desktop\\Project\\ProjectSem_3\\Manage_student\\Manage_student.csproj",
-        "projectName": "Manage_student",
-        "projectPath": "C:\\Users\\Phat Developer King\\Desktop\\Project\\ProjectSem_3\\Manage_student\\Manage_student.csproj",
+        "projectUniqueName": "C:\\Users\\Phat Developer King\\Desktop\\clone\\Institute-of-Fine-Arts\\ProjectSem_3\\Manage_competition\\Manage_competition.csproj",
+        "projectName": "Manage_competition",
+        "projectPath": "C:\\Users\\Phat Developer King\\Desktop\\clone\\Institute-of-Fine-Arts\\ProjectSem_3\\Manage_competition\\Manage_competition.csproj",
         "packagesPath": "C:\\Users\\Phat Developer King\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Phat Developer King\\Desktop\\Project\\ProjectSem_3\\Manage_student\\obj\\",
+        "outputPath": "C:\\Users\\Phat Developer King\\Desktop\\clone\\Institute-of-Fine-Arts\\ProjectSem_3\\Manage_competition\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Phat Developer King\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -42,6 +42,12 @@
               "target": "Package",
               "version": "[3.1.7, )"
             },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[3.1.7, )"
@@ -51,6 +57,65 @@
               "version": "[3.1.4, )"
             }
           },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Phat Developer King\\Desktop\\clone\\Institute-of-Fine-Arts\\ProjectSem_3\\Manage_student\\Manage_student.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Phat Developer King\\Desktop\\clone\\Institute-of-Fine-Arts\\ProjectSem_3\\Manage_student\\Manage_student.csproj",
+        "projectName": "Manage_student",
+        "projectPath": "C:\\Users\\Phat Developer King\\Desktop\\clone\\Institute-of-Fine-Arts\\ProjectSem_3\\Manage_student\\Manage_student.csproj",
+        "packagesPath": "C:\\Users\\Phat Developer King\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Phat Developer King\\Desktop\\clone\\Institute-of-Fine-Arts\\ProjectSem_3\\Manage_student\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Phat Developer King\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\Phat Developer King\\Desktop\\clone\\Institute-of-Fine-Arts\\ProjectSem_3\\Manage_competition\\Manage_competition.csproj": {
+                "projectPath": "C:\\Users\\Phat Developer King\\Desktop\\clone\\Institute-of-Fine-Arts\\ProjectSem_3\\Manage_competition\\Manage_competition.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
           "imports": [
             "net461",
             "net462",

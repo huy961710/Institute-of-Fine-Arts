@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Se9OCn27JQgJrmDDpZQeb6pgMmOxARC0lZSba6Bo0n2Ws05++sx5TnqA2x/FJ/pYXdNvC5IBo/NGn4ny2iySsA==",
+  "dgSpecHash": "2lAlmay6TeVYz7jyEW3IeeO4cMee8sCWVuVbY2+8DgolUwCxR8MnX1iQL8FNBfj2Kc5RN0F6KxunK3ihuD4iMg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Phat Developer King\\Desktop\\Project\\ProjectSem_3\\Manage_competition\\Manage_competition.csproj",
+  "projectFilePath": "C:\\Users\\Phat Developer King\\Desktop\\clone\\Institute-of-Fine-Arts\\ProjectSem_3\\Manage_competition\\Manage_competition.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Phat Developer King\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Phat Developer King\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",

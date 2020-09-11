@@ -39,9 +39,9 @@ namespace Manage_student.Controllers
                 return View(list);
             }
         }
-        //STAFF LOGIN
+        //STAFF role (manager) LOGIN
         public IActionResult Login()
-        {
+        {            
             return View();
         }
         [HttpPost]

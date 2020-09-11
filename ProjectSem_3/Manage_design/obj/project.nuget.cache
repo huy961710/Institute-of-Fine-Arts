@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "10zZHzfd5q7d/fHW8zrCxUMVNPysOUNIDYtwtkrT+n/AnLE2xk4sUEPBxgNJCfUIAwreb4vQ3JNL392JxSooQw==",
+  "dgSpecHash": "WJhRmr0L9gU7GrzzfYktr7L5mW0nuYciF0+AyTXt+1u/bbQz3StQ+vWzya3kZCm/rGlLMeSku9Wpu1lpK1Vztw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Phat Developer King\\Desktop\\Project\\ProjectSem_3\\Manage_design\\Manage_design.csproj",
+  "projectFilePath": "C:\\Users\\Phat Developer King\\Desktop\\clone\\Institute-of-Fine-Arts\\ProjectSem_3\\Manage_design\\Manage_design.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Phat Developer King\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Phat Developer King\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",
