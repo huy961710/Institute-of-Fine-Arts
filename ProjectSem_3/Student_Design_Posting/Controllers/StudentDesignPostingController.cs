@@ -171,7 +171,7 @@ namespace Student_Design_Posting.Controllers
         //END INCOMMINGCOMPETITION
 
         //UPLOAD
-        public IActionResult Upload(string id)
+        public IActionResult Upload(string id) //string STUDENT ID
         {
             if (HttpContext.Session.GetString("studentid") == null) //check login
             {
@@ -203,6 +203,7 @@ namespace Student_Design_Posting.Controllers
                             var stream = new FileStream(path, FileMode.Create);
                             file.CopyToAsync(stream);
                             design.Painting = "../images/" + file.FileName;
+                            design.StudentId = HttpContext.Session.GetString("studentIdUpload");
                             db.Design.Add(design);
                             db.SaveChanges();
                             stream.Close();
@@ -214,12 +215,15 @@ namespace Student_Design_Posting.Controllers
                             return View();
                         }
                 }
+                else
+                {
+                    ViewBag.Msg = "Model is invalid.";
+                }
             }
             catch (Exception e)
             {
                 ViewBag.Msg = e.Message;
-            }
-            ViewBag.Msg = "Model is invalid.";
+            }            
             return View();
         }
 
