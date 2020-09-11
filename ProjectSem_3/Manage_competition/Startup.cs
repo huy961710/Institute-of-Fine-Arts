@@ -24,7 +24,7 @@ namespace Manage_competition
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<CompetitionDB>(option => option.UseSqlServer("server=LAPTOP-7V8JH7QF;database=Project03;Trusted_Connection=true"));
+            services.AddDbContext<CompetitionDB>(option => option.UseSqlServer("server=.;database=Project03;Trusted_Connection=true"));
             services.AddControllersWithViews();
         }
 

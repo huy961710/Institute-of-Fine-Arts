@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\FPT\\ProjectSem_3\\Manage_competition\\Manage_competition.csproj": {}
+    "C:\\Users\\Phat Developer King\\Desktop\\Project\\ProjectSem_3\\Manage_competition\\Manage_competition.csproj": {}
   },
   "projects": {
-    "D:\\FPT\\ProjectSem_3\\Manage_competition\\Manage_competition.csproj": {
+    "C:\\Users\\Phat Developer King\\Desktop\\Project\\ProjectSem_3\\Manage_competition\\Manage_competition.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\FPT\\ProjectSem_3\\Manage_competition\\Manage_competition.csproj",
+        "projectUniqueName": "C:\\Users\\Phat Developer King\\Desktop\\Project\\ProjectSem_3\\Manage_competition\\Manage_competition.csproj",
         "projectName": "Manage_competition",
-        "projectPath": "D:\\FPT\\ProjectSem_3\\Manage_competition\\Manage_competition.csproj",
-        "packagesPath": "C:\\Users\\Duc Huy\\.nuget\\packages\\",
-        "outputPath": "D:\\FPT\\ProjectSem_3\\Manage_competition\\obj\\",
+        "projectPath": "C:\\Users\\Phat Developer King\\Desktop\\Project\\ProjectSem_3\\Manage_competition\\Manage_competition.csproj",
+        "packagesPath": "C:\\Users\\Phat Developer King\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Phat Developer King\\Desktop\\Project\\ProjectSem_3\\Manage_competition\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Duc Huy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Phat Developer King\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -75,7 +75,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

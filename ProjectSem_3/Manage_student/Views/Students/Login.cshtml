@@ -1,0 +1,28 @@
+﻿@model Manage_student.Models.StaffLogin
+@{
+    ViewData["Title"] = "Login";
+}
+
+<h1>Staff Login</h1>
+@using (Html.BeginForm("Login", "Students", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+    <table>
+        <tr>
+            <td>@Html.LabelFor(s => s.StaffId)</td>
+            <td>@Html.EditorFor(s => s.StaffId)</td>
+            <td>@Html.ValidationMessageFor(s => s.StaffId)</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(s => s.Password)</td>
+            <td>@Html.EditorFor(s => s.Password)</td>
+            <td>@Html.ValidationMessageFor(s => s.Password)</td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Login" class="btn-success" /></td>
+            <td>@ViewBag.Msg</td>
+            <td></td>
+        </tr>
+    </table>
+}

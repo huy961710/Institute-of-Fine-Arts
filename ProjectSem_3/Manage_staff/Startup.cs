@@ -25,7 +25,7 @@ namespace Manage_staff
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSession();
-            services.AddDbContext<StaffDB>(option => option.UseSqlServer("server=LAPTOP-7V8JH7QF;database=Project03;Trusted_Connection=true"));
+            services.AddDbContext<StaffDB>(option => option.UseSqlServer("server=.;database=Project03;Trusted_Connection=true"));
             services.AddControllersWithViews();
         }
 

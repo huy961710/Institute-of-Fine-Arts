@@ -1,0 +1,77 @@
+﻿@model Manage_student.Models.Student
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit Student</h1>
+@using (Html.BeginForm("Edit", "Students", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+    <div class="form-group">
+        <div>            
+            @Html.HiddenFor(s => s.StudentId)                           
+            @Html.HiddenFor(s=>s.Password)
+        </div>
+        <div>
+            @Html.LabelFor(s => s.FirstName)
+            @Html.EditorFor(s => s.FirstName)
+            @Html.ValidationMessageFor(s => s.FirstName)
+        </div>
+        <div>
+            @Html.LabelFor(s => s.LastName)
+            @Html.EditorFor(s => s.LastName)
+            @Html.ValidationMessageFor(s => s.LastName)
+        </div>
+        <div>
+            @Html.LabelFor(s => s.DateOfBirth)
+            @Html.EditorFor(s => s.DateOfBirth)
+            @Html.ValidationMessageFor(s => s.DateOfBirth)
+        </div>
+        <div>
+            @Html.LabelFor(s => s.Gender)
+            @Html.RadioButtonFor(s => s.Gender, "Male")<span>Male</span>
+            @Html.RadioButtonFor(s => s.Gender, "Female")<span>Female</span>
+            @Html.ValidationMessageFor(s => s.Gender)
+        </div>
+        <div>
+            @Html.LabelFor(s => s.Phone)
+            @Html.EditorFor(s => s.Phone)
+            @Html.ValidationMessageFor(s => s.Phone)
+        </div>
+        <div>
+            @Html.LabelFor(s => s.Email)
+            @Html.EditorFor(s => s.Email)
+            @Html.ValidationMessageFor(s => s.Email)
+        </div>
+        <div>
+            @Html.LabelFor(s => s.JoinDate)
+            @Html.EditorFor(s=>s.JoinDate)
+            @Html.ValidationMessageFor(s => s.JoinDate)
+        </div>
+        <div>
+            @Html.LabelFor(s => s.Address)
+            @Html.EditorFor(s => s.Address)
+            @Html.ValidationMessageFor(s => s.Address)
+        </div>
+        <div>
+            @Html.LabelFor(s => s.ProfileImage)
+            <img src="../@Html.DisplayFor(s=>s.ProfileImage)" width="100" height="100" alt="@Html.DisplayFor(s=>s.StudentId)" />
+            <div>
+                <input type="file" name="file"/>
+            </div>
+        </div>
+        <div>
+            @Html.HiddenFor(s => s.CompetitionId)
+        </div>
+        <div>
+            <input type="submit" value="Update" class="btn-primary" onclick="return confirm('Are you sure?')"/>
+        </div>
+    </div>
+}
+<div>
+    <h3>@ViewBag.Msg</h3>
+</div>
+<div>
+    @Html.ActionLink("Back to list ", "Index", "Students")
+</div>
