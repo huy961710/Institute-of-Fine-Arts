@@ -10,7 +10,6 @@ using System.IO;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.AspNetCore.HttpOverrides;
-
 namespace Manage_design.Controllers
 {
     public class DesignsController : Controller
@@ -20,9 +19,8 @@ namespace Manage_design.Controllers
         public DesignsController(DesignDB db)
         {
             this.db = db;
-        } 
-        //step 3 
-        //INDEX
+        }
+        //INDEX STAFF Foward best design to Exhibition
         public IActionResult Index(string searchName, string dropdownlistname)
         {
             //if (HttpContext.Session.GetString("staffname") == null) //check session
@@ -31,7 +29,6 @@ namespace Manage_design.Controllers
             //}
             //else
             //{
-                //IEnumerable<Student> list = db.Student.ToList();
                 var list = from d in db.Design
                            join s in db.Student on d.StudentId equals s.StudentId into table1
                            from s in table1.DefaultIfEmpty()
@@ -43,44 +40,43 @@ namespace Manage_design.Controllers
                                Student = s,
                                Posting = p
                            };
-            List<string> mark = new List<string>();
-            mark.Add("best");
-            mark.Add("better");
-            mark.Add("good");
-            mark.Add("moderate");
-            mark.Add("normal");
-            mark.Add("disqualified");
-            mark.Add(null);
+                List<string> mark = new List<string>();
+                mark.Add("best");
+                mark.Add("better");
+                mark.Add("good");
+                mark.Add("moderate");
+                mark.Add("normal");
+                mark.Add("disqualified");
+                mark.Add(null);
+                // Tạo SelectList
+                SelectList markList = new SelectList(mark);
 
+                // Set vào ViewBag
+                ViewBag.MarkList = markList;
+                if (String.IsNullOrEmpty(searchName) && String.IsNullOrEmpty(dropdownlistname))
+                {
 
-            // Tạo SelectList
-            SelectList markList = new SelectList(mark);
+                    return View(list);
+                }
+                else if (!String.IsNullOrEmpty(dropdownlistname) && !String.IsNullOrEmpty(searchName))
+                {
+                    var res = list.Where(d => d.Posting.Mark.Equals(dropdownlistname) && d.Design.DesignName.Contains(searchName));
+                    return View(res);
+                }
+                else if (!String.IsNullOrEmpty(dropdownlistname))
+                {
+                    var res = list.Where(d => d.Posting.Mark.Equals(dropdownlistname));
+                    return View(res);
+                }
+                else
+                {
+                    var res = list.Where(d => d.Design.DesignName.Contains(searchName));
+                    return View(res);
+                }
+            //}//END check session
+        }
 
-            // Set vào ViewBag
-            ViewBag.MarkList = markList;
-            if (String.IsNullOrEmpty(searchName) && String.IsNullOrEmpty(dropdownlistname))
-            {
-
-                return View(list);                
-            }            
-            else if (!String.IsNullOrEmpty(dropdownlistname) && !String.IsNullOrEmpty(searchName))
-            {
-                var res = list.Where(d => d.Posting.Mark.Equals(dropdownlistname) && d.Design.DesignName.Contains(searchName));
-                return View(res);
-            }
-            else if(!String.IsNullOrEmpty(dropdownlistname))
-            {
-                var res = list.Where(d => d.Posting.Mark.Equals(dropdownlistname));
-                return View(res);
-            }
-            else
-            {
-                var res = list.Where(d => d.Design.DesignName.Contains(searchName));
-                return View(res);
-            }
-        }       
-
-        //UPDATE        
+        //UPDATE
         public IActionResult Forward(int id)
         {
             HttpContext.Session.SetInt32("designId", id);
@@ -94,22 +90,24 @@ namespace Manage_design.Controllers
             {
                 if (ModelState.IsValid)
                 {
+                    display.Price = 0;
                     display.SoldStatus = false;
                     display.PaidStatus = false;
                     display.DesignId = (int)HttpContext.Session.GetInt32("designId");
                     db.Display.Add(display);
-                    db.SaveChanges();
+                    db.SaveChanges();                    
                     return RedirectToAction("Index");
                 }
                 else
                 {
                     ViewBag.Msg = "Fail";
                 }
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 ViewBag.Msg = ex.Message;
             }
             return View();
-        }
+        }//End Forward
     }
 }

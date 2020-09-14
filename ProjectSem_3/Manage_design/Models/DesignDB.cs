@@ -13,5 +13,11 @@ namespace Manage_design.Models
         public DbSet<Student> Student { get; set; }
         public DbSet<Posting> Posting { get; set; }
         public DbSet<Display> Display { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Display>()
+                .HasKey(d => new { d.DesignId, d.ExhibitionID });
+        }
     }
 }

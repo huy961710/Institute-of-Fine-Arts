@@ -94,9 +94,10 @@ namespace Student_Design_Posting.Controllers
                                 design.Painting = "../images/" + file.FileName;
                                 model.Painting = design.Painting;
                                 model.Description = design.Description;
-                                //Student cannot change DesignId and StudentId and SubmitDate >= StartDate && <= EndDate of Competition                                
+                                //Student cannot change DesignId and StudentId and SubmitDate >= StartDate && <= EndDate of Competition 
+                                db.SaveChanges();
                                 stream.Close();
-                                //add posting
+                                //update posting
                                 modelPosting.PostDate = today;
                                 db.SaveChanges();
                                 return RedirectToAction("Index");
@@ -149,7 +150,18 @@ namespace Student_Design_Posting.Controllers
         }
 
         //2. UPDATE to join
-
+        private List<DesignStudent> designStudentList()
+        {
+            var list = (from d in db.Design
+                        join s in db.Student on d.StudentId equals s.StudentId
+                        where s.StudentId.Equals(HttpContext.Session.GetString("studentid")) //check student
+                        select new DesignStudent
+                        {
+                            Design = d,
+                            Student = s
+                        }).ToList();
+            return list;
+        }
         //UPLOAD   
         public IActionResult Upload(int id)
         {
@@ -160,6 +172,10 @@ namespace Student_Design_Posting.Controllers
             }
             else
             {
+                //Viewbag list of student designs
+                ViewBag.designList = designStudentList();                
+
+                //check if student is already registered competition
                 var postList = (from p in db.Posting
                            join d in db.Design on p.DesignID equals d.DesignId
                            where p.CompetitionId == id && d.StudentId.Equals(stuId) && p.DesignID.Equals(d.DesignId)
@@ -174,7 +190,7 @@ namespace Student_Design_Posting.Controllers
                     return RedirectToAction("InCommingCompetition");
                 }
                 else
-                {                
+                {
                     HttpContext.Session.SetInt32("registerCompetitionId", id); // competitionId
                     return View();
                 }
@@ -184,6 +200,8 @@ namespace Student_Design_Posting.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Upload(Design design, IFormFile file)
         {
+            //ViewBag list of student designs
+            ViewBag.designList = designStudentList();
             try
             {
                 if (ModelState.IsValid)
@@ -213,7 +231,6 @@ namespace Student_Design_Posting.Controllers
                         else
                         {
                             ViewBag.Msg = "Painting must be .jpg";
-                            return View();
                         }
                 }
                 else
@@ -224,7 +241,7 @@ namespace Student_Design_Posting.Controllers
             catch (Exception e)
             {
                 ViewBag.Msg = e.Message;
-            }            
+            }
             return View();
         }
 

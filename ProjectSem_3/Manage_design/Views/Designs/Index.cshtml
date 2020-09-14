@@ -13,19 +13,19 @@
 <h1>List of Design</h1>
 <br />
 @using (Html.BeginForm())
-{
-    <div>
-        <div><input type="text" name="searchName" placeholder="Enter a Design Name" /></div>
+    {
         <div>
-            <form action="/action_page.php">
-                <label for="Marks">Fillter by Mark:</label>
-                @Html.DropDownList("dropdownlistname", (IEnumerable<SelectListItem>)ViewBag.MarkList, new { @class = "form-control" })
-                <br><input type="submit" name="Search" class="btn-primary" />
-                <br>
-            </form>
+            <div><input type="text" name="searchName" placeholder="Enter a Design Name" /></div>
+            <div>
+                <form action="/action_page.php">
+                    <label for="Marks">Fillter by Mark:</label>
+                    @Html.DropDownList("dropdownlistname", (IEnumerable<SelectListItem>)ViewBag.MarkList, new { @class = "form-control" })
+                    <br><input type="submit" name="Search" class="btn-primary" />
+                    <br>
+                </form>
+            </div>
         </div>
-    </div>
-}
+    }
 <hr />
 <div style="overflow-x:auto">
     <table class="table table-striped">
@@ -36,7 +36,7 @@
             <th>@Html.DisplayNameFor(model => model.Design.Description)</th>
             <th>@Html.DisplayNameFor(model => model.Design.SubmitDate)</th>
             <th>Fullname</th>
-            <th>@Html.DisplayNameFor(model=> model.Posting.Mark)</th>
+            <th>@Html.DisplayNameFor(model => model.Posting.Mark)</th>
             <th></th>
         </tr>
         @foreach (var item in Model)
@@ -53,7 +53,7 @@
                         @Html.DisplayFor(m => FullName)
                     }
                 </td>
-                <td>@Html.DisplayFor(m=>item.Posting.Mark)</td>
+                <td>@Html.DisplayFor(m => item.Posting.Mark)</td>
                 <td>
                     @Html.ActionLink("Forward to Exhibition", "Forward", new { id = item.Design.DesignId })
                 </td>

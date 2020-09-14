@@ -282,7 +282,6 @@ C:\Users\Phat Developer King\Desktop\clone\Institute-of-Fine-Arts\ProjectSem_3\M
 C:\Users\Phat Developer King\Desktop\clone\Institute-of-Fine-Arts\ProjectSem_3\Manage_design\obj\Debug\netcoreapp3.1\Manage_design.TagHelpers.input.cache
 C:\Users\Phat Developer King\Desktop\clone\Institute-of-Fine-Arts\ProjectSem_3\Manage_design\obj\Debug\netcoreapp3.1\Manage_design.TagHelpers.output.cache
 C:\Users\Phat Developer King\Desktop\clone\Institute-of-Fine-Arts\ProjectSem_3\Manage_design\obj\Debug\netcoreapp3.1\Manage_design.RazorCoreGenerate.cache
-C:\Users\Phat Developer King\Desktop\clone\Institute-of-Fine-Arts\ProjectSem_3\Manage_design\obj\Debug\netcoreapp3.1\Razor\Views\Designs\Index.cshtml.g.cs
 C:\Users\Phat Developer King\Desktop\clone\Institute-of-Fine-Arts\ProjectSem_3\Manage_design\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\Phat Developer King\Desktop\clone\Institute-of-Fine-Arts\ProjectSem_3\Manage_design\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
 C:\Users\Phat Developer King\Desktop\clone\Institute-of-Fine-Arts\ProjectSem_3\Manage_design\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
@@ -303,4 +302,5 @@ C:\Users\Phat Developer King\Desktop\clone\Institute-of-Fine-Arts\ProjectSem_3\M
 C:\Users\Phat Developer King\Desktop\clone\Institute-of-Fine-Arts\ProjectSem_3\Manage_design\obj\Debug\netcoreapp3.1\Manage_design.csproj.CoreCompileInputs.cache
 C:\Users\Phat Developer King\Desktop\clone\Institute-of-Fine-Arts\ProjectSem_3\Manage_design\obj\Debug\netcoreapp3.1\Manage_design.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Phat Developer King\Desktop\clone\Institute-of-Fine-Arts\ProjectSem_3\Manage_design\obj\Debug\netcoreapp3.1\Manage_design.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Phat Developer King\Desktop\clone\Institute-of-Fine-Arts\ProjectSem_3\Manage_design\obj\Debug\netcoreapp3.1\Razor\Views\Designs\Index.cshtml.g.cs
 C:\Users\Phat Developer King\Desktop\clone\Institute-of-Fine-Arts\ProjectSem_3\Manage_design\obj\Debug\netcoreapp3.1\Razor\Views\Designs\Forward.cshtml.g.cs
