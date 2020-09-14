@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Manage_design.Models
+namespace Student_Design_Posting.Models
 {
-    public class DesignStudentPosting
+    public class DesignPosting
     {
-        public Student Student { get; set; }
         public Design Design { get; set; }
         public Posting Posting { get; set; }
     }

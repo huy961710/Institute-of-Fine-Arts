@@ -37,8 +37,8 @@ namespace Student_Design_Posting.Models
         [Required]
         public string ProfileImage { get; set; }
         //[Required]
-        public int? CompetitionId { get; set; }
-        [ForeignKey("CompetitionId")]
-        public virtual Competition Competition { get; set; }
+        //public int? CompetitionId { get; set; }
+        //[ForeignKey("CompetitionId")]
+        //public virtual Competition Competition { get; set; }
     }
 }

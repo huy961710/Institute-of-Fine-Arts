@@ -15,6 +15,6 @@ namespace Student_Design_Posting.Models
         public DbSet<Student> Student { get; set; }
         public DbSet<Competition> Competition { get; set; }
         public DbSet<Staff> Staff { get; set; }
-        public DbSet<Posting> Postings { get; set; }
+        public DbSet<Posting> Posting { get; set; }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel;
-namespace Student_Design_Posting.Models
+namespace Manage_design.Models
 {
     [Table("Posting")]
     public class Posting

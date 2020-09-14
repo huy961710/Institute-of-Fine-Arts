@@ -425,7 +425,6 @@ C:\Users\Phat Developer King\Desktop\clone\Institute-of-Fine-Arts\ProjectSem_3\M
 C:\Users\Phat Developer King\Desktop\clone\Institute-of-Fine-Arts\ProjectSem_3\Manage_competition\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\Phat Developer King\Desktop\clone\Institute-of-Fine-Arts\ProjectSem_3\Manage_competition\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\Phat Developer King\Desktop\clone\Institute-of-Fine-Arts\ProjectSem_3\Manage_competition\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\Phat Developer King\Desktop\clone\Institute-of-Fine-Arts\ProjectSem_3\Manage_competition\obj\Debug\netcoreapp3.1\Manage_competition.csprojAssemblyReference.cache
 C:\Users\Phat Developer King\Desktop\clone\Institute-of-Fine-Arts\ProjectSem_3\Manage_competition\obj\Debug\netcoreapp3.1\Manage_competition.AssemblyInfoInputs.cache
 C:\Users\Phat Developer King\Desktop\clone\Institute-of-Fine-Arts\ProjectSem_3\Manage_competition\obj\Debug\netcoreapp3.1\Manage_competition.AssemblyInfo.cs
 C:\Users\Phat Developer King\Desktop\clone\Institute-of-Fine-Arts\ProjectSem_3\Manage_competition\obj\Debug\netcoreapp3.1\Manage_competition.csproj.CoreCompileInputs.cache
@@ -454,3 +453,4 @@ C:\Users\Phat Developer King\Desktop\clone\Institute-of-Fine-Arts\ProjectSem_3\M
 C:\Users\Phat Developer King\Desktop\clone\Institute-of-Fine-Arts\ProjectSem_3\Manage_competition\obj\Debug\netcoreapp3.1\Manage_competition.dll
 C:\Users\Phat Developer King\Desktop\clone\Institute-of-Fine-Arts\ProjectSem_3\Manage_competition\obj\Debug\netcoreapp3.1\Manage_competition.pdb
 C:\Users\Phat Developer King\Desktop\clone\Institute-of-Fine-Arts\ProjectSem_3\Manage_competition\obj\Debug\netcoreapp3.1\Manage_competition.genruntimeconfig.cache
+C:\Users\Phat Developer King\Desktop\clone\Institute-of-Fine-Arts\ProjectSem_3\Manage_competition\obj\Debug\netcoreapp3.1\Manage_competition.csprojAssemblyReference.cache

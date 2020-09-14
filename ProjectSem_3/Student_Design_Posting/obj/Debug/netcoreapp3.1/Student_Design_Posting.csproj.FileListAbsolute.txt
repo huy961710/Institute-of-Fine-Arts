@@ -484,6 +484,7 @@ C:\Users\Phat Developer King\Desktop\Project\ProjectSem_3\Student_Design_Posting
 C:\Users\Phat Developer King\Desktop\Project\ProjectSem_3\Student_Design_Posting\obj\Debug\netcoreapp3.1\Razor\Views\StudentDesignPosting\InCommingCompetition.cshtml.g.cs
 C:\Users\Phat Developer King\Desktop\Project\ProjectSem_3\Student_Design_Posting\obj\Debug\netcoreapp3.1\Razor\Views\StudentDesignPosting\UpdateCompetition.cshtml.g.cs
 C:\Users\Phat Developer King\Desktop\Project\ProjectSem_3\Student_Design_Posting\obj\Debug\netcoreapp3.1\Razor\Views\StudentDesignPosting\Upload.cshtml.g.cs
+C:\Users\Phat Developer King\Desktop\clone\Institute-of-Fine-Arts\ProjectSem_3\Student_Design_Posting\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
 C:\Users\Phat Developer King\Desktop\clone\Institute-of-Fine-Arts\ProjectSem_3\Student_Design_Posting\bin\Debug\netcoreapp3.1\Manage_competition.Views.dll
 C:\Users\Phat Developer King\Desktop\clone\Institute-of-Fine-Arts\ProjectSem_3\Student_Design_Posting\bin\Debug\netcoreapp3.1\Manage_competition.Views.pdb
 C:\Users\Phat Developer King\Desktop\clone\Institute-of-Fine-Arts\ProjectSem_3\Student_Design_Posting\bin\Debug\netcoreapp3.1\appsettings.Development.json
@@ -510,6 +511,7 @@ C:\Users\Phat Developer King\Desktop\clone\Institute-of-Fine-Arts\ProjectSem_3\S
 C:\Users\Phat Developer King\Desktop\clone\Institute-of-Fine-Arts\ProjectSem_3\Student_Design_Posting\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
 C:\Users\Phat Developer King\Desktop\clone\Institute-of-Fine-Arts\ProjectSem_3\Student_Design_Posting\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
 C:\Users\Phat Developer King\Desktop\clone\Institute-of-Fine-Arts\ProjectSem_3\Student_Design_Posting\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Phat Developer King\Desktop\clone\Institute-of-Fine-Arts\ProjectSem_3\Student_Design_Posting\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
 C:\Users\Phat Developer King\Desktop\clone\Institute-of-Fine-Arts\ProjectSem_3\Student_Design_Posting\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Users\Phat Developer King\Desktop\clone\Institute-of-Fine-Arts\ProjectSem_3\Student_Design_Posting\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
 C:\Users\Phat Developer King\Desktop\clone\Institute-of-Fine-Arts\ProjectSem_3\Student_Design_Posting\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
@@ -605,7 +607,6 @@ C:\Users\Phat Developer King\Desktop\clone\Institute-of-Fine-Arts\ProjectSem_3\S
 C:\Users\Phat Developer King\Desktop\clone\Institute-of-Fine-Arts\ProjectSem_3\Student_Design_Posting\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
 C:\Users\Phat Developer King\Desktop\clone\Institute-of-Fine-Arts\ProjectSem_3\Student_Design_Posting\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
 C:\Users\Phat Developer King\Desktop\clone\Institute-of-Fine-Arts\ProjectSem_3\Student_Design_Posting\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
-C:\Users\Phat Developer King\Desktop\clone\Institute-of-Fine-Arts\ProjectSem_3\Student_Design_Posting\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
 C:\Users\Phat Developer King\Desktop\clone\Institute-of-Fine-Arts\ProjectSem_3\Student_Design_Posting\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
 C:\Users\Phat Developer King\Desktop\clone\Institute-of-Fine-Arts\ProjectSem_3\Student_Design_Posting\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\Phat Developer King\Desktop\clone\Institute-of-Fine-Arts\ProjectSem_3\Student_Design_Posting\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
@@ -630,9 +631,7 @@ C:\Users\Phat Developer King\Desktop\clone\Institute-of-Fine-Arts\ProjectSem_3\S
 C:\Users\Phat Developer King\Desktop\clone\Institute-of-Fine-Arts\ProjectSem_3\Student_Design_Posting\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
 C:\Users\Phat Developer King\Desktop\clone\Institute-of-Fine-Arts\ProjectSem_3\Student_Design_Posting\obj\Debug\netcoreapp3.1\Razor\Views\StudentDesignPosting\Edit.cshtml.g.cs
 C:\Users\Phat Developer King\Desktop\clone\Institute-of-Fine-Arts\ProjectSem_3\Student_Design_Posting\obj\Debug\netcoreapp3.1\Razor\Views\StudentDesignPosting\InCommingCompetition.cshtml.g.cs
-C:\Users\Phat Developer King\Desktop\clone\Institute-of-Fine-Arts\ProjectSem_3\Student_Design_Posting\obj\Debug\netcoreapp3.1\Razor\Views\StudentDesignPosting\Index.cshtml.g.cs
 C:\Users\Phat Developer King\Desktop\clone\Institute-of-Fine-Arts\ProjectSem_3\Student_Design_Posting\obj\Debug\netcoreapp3.1\Razor\Views\StudentDesignPosting\Login.cshtml.g.cs
-C:\Users\Phat Developer King\Desktop\clone\Institute-of-Fine-Arts\ProjectSem_3\Student_Design_Posting\obj\Debug\netcoreapp3.1\Razor\Views\StudentDesignPosting\UpdateCompetition.cshtml.g.cs
 C:\Users\Phat Developer King\Desktop\clone\Institute-of-Fine-Arts\ProjectSem_3\Student_Design_Posting\obj\Debug\netcoreapp3.1\Razor\Views\StudentDesignPosting\Upload.cshtml.g.cs
 C:\Users\Phat Developer King\Desktop\clone\Institute-of-Fine-Arts\ProjectSem_3\Student_Design_Posting\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
 C:\Users\Phat Developer King\Desktop\clone\Institute-of-Fine-Arts\ProjectSem_3\Student_Design_Posting\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
@@ -645,3 +644,4 @@ C:\Users\Phat Developer King\Desktop\clone\Institute-of-Fine-Arts\ProjectSem_3\S
 C:\Users\Phat Developer King\Desktop\clone\Institute-of-Fine-Arts\ProjectSem_3\Student_Design_Posting\obj\Debug\netcoreapp3.1\Student_Design_Posting.dll
 C:\Users\Phat Developer King\Desktop\clone\Institute-of-Fine-Arts\ProjectSem_3\Student_Design_Posting\obj\Debug\netcoreapp3.1\Student_Design_Posting.pdb
 C:\Users\Phat Developer King\Desktop\clone\Institute-of-Fine-Arts\ProjectSem_3\Student_Design_Posting\obj\Debug\netcoreapp3.1\Student_Design_Posting.genruntimeconfig.cache
+C:\Users\Phat Developer King\Desktop\clone\Institute-of-Fine-Arts\ProjectSem_3\Student_Design_Posting\obj\Debug\netcoreapp3.1\Razor\Views\StudentDesignPosting\Index.cshtml.g.cs

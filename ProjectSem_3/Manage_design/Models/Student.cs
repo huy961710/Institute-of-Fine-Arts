@@ -14,30 +14,16 @@ namespace Manage_design.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        [Required]
         public string StudentId { get; set; }
-        [Required]
         public string Password { get; set; }
-        [Required]
         public string FirstName { get; set; }
-        [Required]
         public string LastName { get; set; }
-        [Required]
         public DateTime DateOfBirth { get; set; }
-        [Required]
         public string Gender { get; set; }
-        [Required]
-        public string Phone { get; set; }
-        [Required]
+        public string Phone { get; set; }      
         public string Email { get; set; }
-        [Required]        
         public DateTime JoinDate { get; set; }
-        [Required]
         public string Address { get; set; }
-        [Required]
-        public string ProfileImage { get; set; }
-        //[Required]
-        [ForeignKey("CompetitionId")]
-        public int? CompetitionId { get; set; }
+        public string ProfileImage { get; set; }        
     }
 }

@@ -29,8 +29,7 @@ namespace Manage_design.Models
         [DataType(DataType.Date)]
         public DateTime SubmitDate { get; set; } //date <= competitions end date
         [Required]
-        public string StudentId { get; set; }
         [ForeignKey("StudentId")]
-        public virtual Student Student { get; set; }
+        public string StudentId { get; set; }        
     }
 }

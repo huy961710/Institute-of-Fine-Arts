@@ -236,7 +236,7 @@ namespace Manage_student.Controllers
             return View();
         }
 
-        //DELETE
+        //DELETE        
         public IActionResult Delete(string id)
         {
             if (HttpContext.Session.GetString("staffname") == null) //check session

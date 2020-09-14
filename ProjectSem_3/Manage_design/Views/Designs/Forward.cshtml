@@ -1,0 +1,24 @@
+﻿@model Manage_design.Models.Display
+@{
+    ViewData["Title"] = "Forward";
+}
+
+<h1>Forward</h1>
+@using (Html.BeginForm("Forward", "Designs", FormMethod.Post))
+{
+<div>
+    <div>
+        @Html.LabelFor(model => model.Price)
+        @Html.EditorFor(model => model.Price)
+        @Html.ValidationMessageFor(model => model.Price)
+    </div>
+    <div>
+        @Html.LabelFor(model => model.ExhibitionID)
+        @Html.EditorFor(model => model.ExhibitionID)
+        @Html.ValidationMessageFor(model => model.ExhibitionID)
+    </div>
+    <div>
+        <input type="submit" value="Create" class="btn-primary" />
+    </div>
+</div>
+}

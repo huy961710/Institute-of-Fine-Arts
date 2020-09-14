@@ -11,5 +11,7 @@ namespace Manage_design.Models
         public DesignDB(DbContextOptions options) : base(options) { }
         public DbSet<Design> Design { get; set; }
         public DbSet<Student> Student { get; set; }
+        public DbSet<Posting> Posting { get; set; }
+        public DbSet<Display> Display { get; set; }
     }
 }

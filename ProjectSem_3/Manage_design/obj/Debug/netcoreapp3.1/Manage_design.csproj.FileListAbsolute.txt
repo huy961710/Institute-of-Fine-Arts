@@ -277,9 +277,6 @@ C:\Users\Phat Developer King\Desktop\clone\Institute-of-Fine-Arts\ProjectSem_3\M
 C:\Users\Phat Developer King\Desktop\clone\Institute-of-Fine-Arts\ProjectSem_3\Manage_design\obj\Debug\netcoreapp3.1\Manage_design.csprojAssemblyReference.cache
 C:\Users\Phat Developer King\Desktop\clone\Institute-of-Fine-Arts\ProjectSem_3\Manage_design\obj\Debug\netcoreapp3.1\Manage_design.AssemblyInfoInputs.cache
 C:\Users\Phat Developer King\Desktop\clone\Institute-of-Fine-Arts\ProjectSem_3\Manage_design\obj\Debug\netcoreapp3.1\Manage_design.AssemblyInfo.cs
-C:\Users\Phat Developer King\Desktop\clone\Institute-of-Fine-Arts\ProjectSem_3\Manage_design\obj\Debug\netcoreapp3.1\Manage_design.csproj.CoreCompileInputs.cache
-C:\Users\Phat Developer King\Desktop\clone\Institute-of-Fine-Arts\ProjectSem_3\Manage_design\obj\Debug\netcoreapp3.1\Manage_design.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\Phat Developer King\Desktop\clone\Institute-of-Fine-Arts\ProjectSem_3\Manage_design\obj\Debug\netcoreapp3.1\Manage_design.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Phat Developer King\Desktop\clone\Institute-of-Fine-Arts\ProjectSem_3\Manage_design\obj\Debug\netcoreapp3.1\Manage_design.RazorAssemblyInfo.cache
 C:\Users\Phat Developer King\Desktop\clone\Institute-of-Fine-Arts\ProjectSem_3\Manage_design\obj\Debug\netcoreapp3.1\Manage_design.RazorAssemblyInfo.cs
 C:\Users\Phat Developer King\Desktop\clone\Institute-of-Fine-Arts\ProjectSem_3\Manage_design\obj\Debug\netcoreapp3.1\Manage_design.TagHelpers.input.cache
@@ -302,3 +299,8 @@ C:\Users\Phat Developer King\Desktop\clone\Institute-of-Fine-Arts\ProjectSem_3\M
 C:\Users\Phat Developer King\Desktop\clone\Institute-of-Fine-Arts\ProjectSem_3\Manage_design\obj\Debug\netcoreapp3.1\Manage_design.dll
 C:\Users\Phat Developer King\Desktop\clone\Institute-of-Fine-Arts\ProjectSem_3\Manage_design\obj\Debug\netcoreapp3.1\Manage_design.pdb
 C:\Users\Phat Developer King\Desktop\clone\Institute-of-Fine-Arts\ProjectSem_3\Manage_design\obj\Debug\netcoreapp3.1\Manage_design.genruntimeconfig.cache
+C:\Users\Phat Developer King\Desktop\clone\Institute-of-Fine-Arts\ProjectSem_3\Manage_design\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\Phat Developer King\Desktop\clone\Institute-of-Fine-Arts\ProjectSem_3\Manage_design\obj\Debug\netcoreapp3.1\Manage_design.csproj.CoreCompileInputs.cache
+C:\Users\Phat Developer King\Desktop\clone\Institute-of-Fine-Arts\ProjectSem_3\Manage_design\obj\Debug\netcoreapp3.1\Manage_design.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Phat Developer King\Desktop\clone\Institute-of-Fine-Arts\ProjectSem_3\Manage_design\obj\Debug\netcoreapp3.1\Manage_design.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Phat Developer King\Desktop\clone\Institute-of-Fine-Arts\ProjectSem_3\Manage_design\obj\Debug\netcoreapp3.1\Razor\Views\Designs\Forward.cshtml.g.cs

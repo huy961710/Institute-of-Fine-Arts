@@ -22,6 +22,7 @@
                 @Html.DisplayNameFor(model => model.StaffId)
             </th>
             <th></th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -40,9 +41,18 @@
                 @Html.DisplayFor(modelItem => item.StaffId)
             </td>
             <td>
-                @Html.ActionLink("Register", "UpdateCompetition", new { id = item.CompetitionId }, new { onClick = "return confirm('Are you sure?')" })
+                @Html.ActionLink("Register", "Upload", new { id = item.CompetitionId })
+            </td>
+            <td>
+                @if (TempData["testmsgs"] != null)
+                {
+                    @Html.Raw(TempData["testmsgs"])
+                }
             </td>
         </tr>
 }
     </tbody>
 </table>
+<div>
+    @Html.ActionLink("Back to List", "Index", "StudentDesignPosting")
+</div>

@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Manage_design.Models.DesignStudent>
+﻿@model IEnumerable<Manage_design.Models.DesignStudentPosting>
 @using Microsoft.AspNetCore.Http
 
 @{
@@ -15,21 +15,13 @@
 @using (Html.BeginForm())
 {
     <div>
-        <div><input type="text" name="dname" placeholder="Enter a Design Name" /></div>
-        <input type="submit" name="Search" class="btn-primary" />
+        <div><input type="text" name="searchName" placeholder="Enter a Design Name" /></div>
         <div>
             <form action="/action_page.php">
                 <label for="Marks">Fillter by Mark:</label>
-                <select name="Marks" id="Marks">
-                    <option value="Best">best</option>
-                    <option value="better">better</option>
-                    <option value="good">good</option>
-                    <option value="moderate">moderate</option>
-                    <option value="normal">normal</option>
-                    <option value="disqualified">disqualified</option>
-                </select>
-                <br><br>
-                <input type="submit" value="Submit">
+                @Html.DropDownList("dropdownlistname", (IEnumerable<SelectListItem>)ViewBag.MarkList, new { @class = "form-control" })
+                <br><input type="submit" name="Search" class="btn-primary" />
+                <br>
             </form>
         </div>
     </div>
@@ -44,7 +36,7 @@
             <th>@Html.DisplayNameFor(model => model.Design.Description)</th>
             <th>@Html.DisplayNameFor(model => model.Design.SubmitDate)</th>
             <th>Fullname</th>
-            <th>Mark</th>
+            <th>@Html.DisplayNameFor(model=> model.Posting.Mark)</th>
             <th></th>
         </tr>
         @foreach (var item in Model)
@@ -61,7 +53,7 @@
                         @Html.DisplayFor(m => FullName)
                     }
                 </td>
-                <td>Best</td>
+                <td>@Html.DisplayFor(m=>item.Posting.Mark)</td>
                 <td>
                     @Html.ActionLink("Forward to Exhibition", "Forward", new { id = item.Design.DesignId })
                 </td>
