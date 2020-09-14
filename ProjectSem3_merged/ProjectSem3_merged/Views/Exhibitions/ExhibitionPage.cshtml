@@ -1,0 +1,20 @@
+﻿@model IEnumerable<ProjectSem3_merged.Models.CombineModels>
+
+@{
+    ViewData["Title"] = "ExhibitionPage";
+}
+
+<h2>Exhibition Page</h2>
+<br />
+@foreach (var item in Model)
+{
+    <div style="font-size:medium" class="font-weight-bold border-dark">
+        <div class="border">
+            <img src="@item.Design.Painting" width="200" height="200" />
+        </div>
+        <div class="border">@item.Design.DesignName</div>
+        <div class="border">Exhibition: @item.Exhibition.ExhibitionName</div>
+        <div class="border">Painted by: @item.Student.FirstName&nbsp;@item.Student.LastName</div>
+    </div>
+    <br />
+}

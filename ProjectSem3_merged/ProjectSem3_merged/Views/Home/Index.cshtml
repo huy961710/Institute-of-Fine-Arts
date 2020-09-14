@@ -1,0 +1,38 @@
+﻿@model IEnumerable<ProjectSem3_merged.Models.CombineModels>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<br /><br />
+<h2>Our Competitions</h2>
+<br />
+<div style="font-size:medium" class="font-weight-bold">
+   @foreach (var item in ViewBag.data)
+   {
+       <div>@item.CompetitionName</div>
+       <div>@item.StartDate.ToShortDateString()&nbsp;&nbsp;&nbsp;&nbsp;@item.EndDate.ToShortDateString()</div>
+       <div><img src="@item.CompetitionImages" width="50" height="50" /></div>
+       <div>@item.Description</div>
+       <br />
+   }
+</div>
+<br /><br /><br />
+
+<h2>Top Postings</h2>
+<div style="font-size:medium" class="font-weight-bold">
+    @foreach (var item in Model)
+    { 
+        <div>
+            <img src="@item.Student.ProfileImage" width="50" height="50" />&nbsp;&nbsp;
+            @item.Student.FirstName&nbsp;@item.Student.LastName
+        </div>
+        <div>
+            <img src="@item.Design.Painting" width="200" height="200" />
+        </div>
+        <div>
+            Description: @item.Design.Description
+        </div>
+        <br /><br />
+    }
+</div>
