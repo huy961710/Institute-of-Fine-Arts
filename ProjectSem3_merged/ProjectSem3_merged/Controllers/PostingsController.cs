@@ -17,8 +17,11 @@ namespace ProjectSem3_merged.Controllers
             this.db = db;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(string mname, string dname, string cname, string sname)
         {
+            var staff = db.Staffs.ToList();
+            ViewBag.data = new SelectList(staff, "StaffId", "StaffName");
+
             var list = from p in db.Postings
                        join d in db.Designs on p.DesignId equals d.DesignId
                        join c in db.Competitions on p.CompetitionId equals c.CompetitionId
@@ -30,7 +33,30 @@ namespace ProjectSem3_merged.Controllers
                            Competition = c,
                            Staff = s
                        };
-            return View(list);
+            if(mname != null)
+            {
+                var filter = list.Where(m => m.Posting.Mark.ToLower().Contains(mname) || m.Posting.Mark.ToUpper().Contains(mname));
+                return View(filter);
+            }
+            else if(dname != null)
+            {
+                var filter = list.Where(d => d.Design.DesignName.ToLower().Contains(dname) || d.Design.DesignName.ToUpper().Contains(dname));
+                return View(filter);
+            }
+            else if(cname != null)
+            {
+                var filter = list.Where(c=>c.Competition.CompetitionName.Contains(cname));
+                return View(filter);
+            }
+            else if(sname != null)
+            {
+                var filter = list.Where(s => s.Staff.StaffId.Equals(sname));
+                return View(filter);
+            }
+            else
+            {
+                return View(list);
+            }
         }
 
         public IActionResult Edit(int id)

@@ -16,7 +16,7 @@ namespace ProjectSem3_merged.Controllers
             this.db = db;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(string ename, string pname)
         {
             var list = from e in db.Exhibitions
                        join s in db.Staffs
@@ -26,17 +26,32 @@ namespace ProjectSem3_merged.Controllers
                            Staff = s,
                            Exhibition = e
                        };
-            return View(list);
+            if (ename != null)
+            {
+                var filter = list.Where(e => e.Exhibition.ExhibitionName.ToLower().Contains(ename) || e.Exhibition.ExhibitionName.ToUpper().Contains(ename));
+                return View(filter);
+            }
+            else if (pname != null)
+            {
+                var filter = list.Where(e => e.Exhibition.Place.ToLower().Contains(pname) || e.Exhibition.Place.ToUpper().Contains(pname));
+                return View(filter);
+            }
+            else
+            {
+                return View(list);
+            }
         }
 
-        public IActionResult ExhibitionPage()
+        public IActionResult ExhibitionPage(string ename)
         {
-            var list = from ds in db.Display
-                       join d in db.Designs on ds.DesignID equals d.DesignId
+            var exh = db.Exhibitions.ToList();
+            ViewBag.data = new SelectList(exh, "ExhibitionId", "ExhibitionName");
+
+            var list = from d in db.Designs
+                       join ds in db.Display on d.DesignId equals ds.DesignID
                        join e in db.Exhibitions on ds.ExhibitionID equals e.ExhibitionId
                        join stu in db.Students on d.StudentId equals stu.StudentId
                        orderby ds.ExhibitionID
-
                        select new CombineModels
                        {
                            Display = ds,
@@ -44,7 +59,16 @@ namespace ProjectSem3_merged.Controllers
                            Design = d,
                            Student = stu
                        };
-            return View(list);
+            if(string.IsNullOrEmpty(ename))
+            {
+                return View(list);
+            }
+            else
+            {
+                int eId = int.Parse(ename);
+                var filter = list.Where(d=>d.Display.ExhibitionID.Equals(eId));
+                return View(filter);
+            }
         }
 
         public IActionResult UpcomingIndex()
@@ -134,7 +158,7 @@ namespace ProjectSem3_merged.Controllers
                         TimeSpan time = enddate - startdate;
                         int edittime = time.Days;
 
-                        if (exhibition.StartDate.Date >= today)
+                        if (startdate.Date >= today)
                         {
                             if (edittime > 0)
                             {

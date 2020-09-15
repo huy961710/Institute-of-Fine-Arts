@@ -5,7 +5,19 @@
 }
 
 <h2>List of Postings</h2>
-
+<br />
+@using (Html.BeginForm("Index", "Postings", FormMethod.Post))
+{
+    <div><input type="text" name="mname" placeholder="Enter mark" /></div>
+    <div><input type="text" name="dname" placeholder="Enter design name" /></div>
+    <div><input type="text" name="cname" placeholder="Enter competition name" /></div>
+    <div>
+        <label>Select Staff: </label>
+        @Html.DropDownList("sname", ViewBag.data as SelectList, "All Staffs")
+    </div>
+    <div><input type="submit" value="Search"></div>
+}
+<br />
 <table class="table">
     <thead>
         <tr>

@@ -16,8 +16,11 @@ namespace ProjectSem3_merged.Controllers
             this.db = db;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(string ename)
         {
+            var src = db.Exhibitions.ToList();
+            ViewBag.data = new SelectList(src, "ExhibitionId", "ExhibitionName");
+
             var list = from ds in db.Display
                        join d in db.Designs on ds.DesignID equals d.DesignId
                        join e in db.Exhibitions on ds.ExhibitionID equals e.ExhibitionId
@@ -29,7 +32,16 @@ namespace ProjectSem3_merged.Controllers
                            Exhibition = e,
                            Design = d
                        };
-            return View(list);
+            if(string.IsNullOrEmpty(ename))
+            {
+                return View(list);
+            }
+            else
+            {
+                int eId = int.Parse(ename);
+                var filter = list.Where(e => e.Exhibition.ExhibitionId.Equals(eId));
+                return View(filter);
+            }
         }
 
         public IActionResult Create()
