@@ -1,0 +1,38 @@
+﻿@model IEnumerable<ProjectSem3_merged.Models.CombineModels>
+
+@{
+    ViewData["Title"] = "UpcomingIndex";
+}
+
+<h2>Upcoming Exhibitions</h2>
+<br />
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>ExhibitionName</th>
+            <th>Place</th>
+            <th>StartDate</th>
+            <th>EndDate</th>
+            <th>StaffName</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Exhibition.ExhibitionId</td>
+                <td>@item.Exhibition.ExhibitionName</td>
+                <td>@item.Exhibition.Place</td>
+                <td>@item.Exhibition.StartDate</td>
+                <td>@item.Exhibition.EndDate</td>
+                <td>@item.Staff.StaffName</td>
+                <td>
+                    @Html.ActionLink("Update", "EditUpComing", new { id = item.Exhibition.ExhibitionId })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
