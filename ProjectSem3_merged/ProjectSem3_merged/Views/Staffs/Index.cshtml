@@ -6,26 +6,32 @@
 
 <h2>List of Staffs</h2>
 <br />
+@using (Html.BeginForm("Index", "Staffs", FormMethod.Post))
+{
+    <input type="text" name="sname" placeholder="Enter staff name" />
+    <input type="submit" value="Search">
+}
+<br />
 <p>
     @Html.ActionLink("Create New Staff", "Create", "Staffs")
 </p>
 <p>
-    @Html.ActionLink("Student List","Index","Students")
+    @Html.ActionLink("Student List", "Index", "Students")
 </p>
 <p>
-    @Html.ActionLink("Award List","Index","Awards")
+    @Html.ActionLink("Award List", "Index", "Awards")
 </p>
 <p>
-    @Html.ActionLink("Posting List","Index","Postings")
+    @Html.ActionLink("Posting List", "Index", "Postings")
 </p>
 <p>
-    @Html.ActionLink("Exhibition List","Index","Exhibitions")
+    @Html.ActionLink("Exhibition List", "Index", "Exhibitions")
 </p>
 <p>
-    @Html.ActionLink("Update Upcoming Exhibition","UpcomingIndex","Exhibitions")
+    @Html.ActionLink("Update Upcoming Exhibition", "UpcomingIndex", "Exhibitions")
 </p>
 <p>
-    @Html.ActionLink("Competition List","Index","Competitions")
+    @Html.ActionLink("Competition List", "Index", "Competitions")
 </p>
 <br />
 <table class="table">
@@ -47,7 +53,7 @@
             <td>@item.StaffName</td>
             <td>@item.JoinDate.ToShortDateString()</td>
             <td>
-                <img src="@item.ProfileImage" width="50" height="50" />
+                <img src="../@item.ProfileImage" width="50" height="50" />
             </td>
             <td>@item.Email</td>
             <td>@item.Phone</td>

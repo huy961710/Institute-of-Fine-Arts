@@ -6,11 +6,18 @@
 
 <h2>Exhibition Page</h2>
 <br />
+@using (Html.BeginForm("ExhibitionPage", "Exhibitions", FormMethod.Post))
+{
+    <label>Select an Exhibition: </label>
+    @Html.DropDownList("ename", ViewBag.data as SelectList, "All")
+    <input type="submit" value="Search">
+}
+<br />
 @foreach (var item in Model)
 {
     <div style="font-size:medium" class="font-weight-bold border-dark">
         <div class="border">
-            <img src="@item.Design.Painting" width="200" height="200" />
+            <img src="../@item.Design.Painting" width="200" height="200" />
         </div>
         <div class="border">@item.Design.DesignName</div>
         <div class="border">Exhibition: @item.Exhibition.ExhibitionName</div>

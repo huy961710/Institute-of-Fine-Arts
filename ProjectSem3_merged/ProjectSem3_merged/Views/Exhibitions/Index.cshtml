@@ -5,7 +5,16 @@
 }
 
 <h2>List of Exhibitions</h2>
-
+<br />
+@using (Html.BeginForm("Index", "Exhibitions", FormMethod.Post))
+{
+    <div>
+        <input type="text" name="ename" placeholder="Enter an exhibition" /> | 
+        <input type="text" name="pname" placeholder="Enter a place" />
+    </div> 
+    <div><input type="submit" value="Search"></div>
+}
+<br />
 <p>
     <a asp-action="Create">Create New Exhibition</a>
 </p>
@@ -31,8 +40,8 @@
                 <td>@item.Exhibition.ExhibitionId</td>
                 <td>@item.Exhibition.ExhibitionName</td>
                 <td>@item.Exhibition.Place</td>
-                <td>@item.Exhibition.StartDate</td>
-                <td>@item.Exhibition.EndDate</td>
+                <td>@item.Exhibition.StartDate.ToShortDateString()</td>
+                <td>@item.Exhibition.EndDate.ToShortDateString()</td>
                 <td>@item.Staff.StaffName</td>
                 <td>
                     @Html.ActionLink("Update", "Edit", new { id = item.Exhibition.ExhibitionId }) |

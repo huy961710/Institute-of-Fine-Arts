@@ -5,7 +5,17 @@
 }
 
 <h2>List of Awards</h2>
-
+<br />
+@using (Html.BeginForm("Index", "Awards", FormMethod.Post))
+{
+    <div><input type="text" name="aname" placeholder="Enter an award" /></div>
+    <div>
+        <label>Select a Competition: </label>
+        @Html.DropDownList("cname", ViewBag.data as SelectList, "All")
+    </div>
+    <div><input type="submit" value="Search"></div>
+}
+<br />
 <p>
     <a asp-action="Create">Create New Award</a>
 </p>

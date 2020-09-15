@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using ProjectSem3_merged.Models;
 using Microsoft.AspNetCore.Http;
 using System.IO;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace ProjectSem3_merged.Controllers
 {
@@ -17,10 +18,18 @@ namespace ProjectSem3_merged.Controllers
             this.db = db;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(string sname)
         {
             var list = db.Staffs.ToList();
-            return View(list);
+            if(string.IsNullOrEmpty(sname))
+            {
+                return View(list);
+            }
+            else
+            {
+                var filter = list.Where(s=>s.StaffName.ToLower().Contains(sname) || s.StaffName.ToUpper().Contains(sname));
+                return View(filter);
+            }
         }
 
         [HttpGet]

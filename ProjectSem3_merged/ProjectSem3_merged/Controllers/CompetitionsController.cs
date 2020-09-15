@@ -18,8 +18,11 @@ namespace ProjectSem3_merged.Controllers
             this.db = db;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(string cname)
         {
+            var com = db.Competitions.ToList();
+            ViewBag.data = new SelectList(com, "CompetitionId", "CompetitionName");
+
             var list = from c in db.Competitions
                        join s in db.Staffs
                        on c.StaffId equals s.StaffId
@@ -28,7 +31,15 @@ namespace ProjectSem3_merged.Controllers
                            Staff = s,
                            Competition = c
                        };
-            return View(list);
+            if(string.IsNullOrEmpty(cname))
+            {
+                return View(list);
+            }
+            else
+            {
+                var filter = list.Where(c=>c.Competition.CompetitionName.ToLower().Contains(cname) || c.Competition.CompetitionName.ToUpper().Contains(cname));
+                return View(filter);
+            }
         }
 
         public IActionResult Create()
@@ -105,6 +116,27 @@ namespace ProjectSem3_merged.Controllers
                             editCompetition.EndDate = competition.EndDate;
                             editCompetition.Description = competition.Description;
 
+                            DateTime today = Convert.ToDateTime(DateTime.Today);
+                            DateTime startdate = Convert.ToDateTime(competition.StartDate);
+                            DateTime enddate = Convert.ToDateTime(competition.EndDate);
+                            TimeSpan time = enddate - startdate;
+                            int edittime = time.Days;
+
+                            if(startdate.Date >= today)
+                            {
+                                if(edittime > 0)
+                                {
+
+                                }
+                                else
+                                {
+                                    ViewBag.Msg = "EndDate cannot be earlier than StartDate. Update Failed";
+                                }
+                            }
+                            else
+                            {
+                                ViewBag.Msg = "Competition has already started. Update Failed";
+                            }
                             db.SaveChanges();
                             return RedirectToAction("Index", "Competitions");
                         }
