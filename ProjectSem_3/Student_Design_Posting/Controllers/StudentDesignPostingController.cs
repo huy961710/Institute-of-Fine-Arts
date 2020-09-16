@@ -24,35 +24,37 @@ namespace Student_Design_Posting.Controllers
         }
 
         //step 3
-        //INDEX for Student View Design
+        private List<DesignStudent> designStudentList()
+        {
+            var list = (from d in db.Design
+                        join s in db.Student on d.StudentId equals s.StudentId
+                        where s.StudentId.Equals(HttpContext.Session.GetString("studentid")) //check student
+                        select new DesignStudent
+                        {
+                            Design = d,
+                            Student = s
+                        }).ToList();
+            return list;
+        }
+
+        //INDEX (List of student designs)
         public IActionResult Index()
         {
-            if (HttpContext.Session.GetString("studentid") == null) //check session
+            if (HttpContext.Session.GetString("studentid") == null)
             {
                 return RedirectToAction("Login");
             }
             else
             {
-                var list = from d in db.Design
-                           join s in db.Student on d.StudentId equals s.StudentId
-                           where s.StudentId.Equals(HttpContext.Session.GetString("studentid")) //check student
-                           select new DesignStudent
-                           {
-                               Design = d,
-                               Student = s
-                           };
-               return View(list);
+               var model = designStudentList();
+               return View(model);
             }
         }
 
-        //EDIT
+        //EDIT (Update Student Design)
         public IActionResult Edit(int id)
         {
-            if (HttpContext.Session.GetString("studentid") == null) //check session
-            {
-                return RedirectToAction("Login");
-            }
-            else
+            if (HttpContext.Session.GetString("studentid") != null)
             {
                 var model = db.Design.Find(id);
                 //check model is not null and this DesignStudentId == Session
@@ -60,12 +62,10 @@ namespace Student_Design_Posting.Controllers
                 {
                     return View(model); ;
                 }
-                else
-                {
-                    return RedirectToAction("Login");
-                }
-            } //end check session
+            }
+            return RedirectToAction("Login");
         }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Edit(Design design, IFormFile file)
@@ -128,7 +128,7 @@ namespace Student_Design_Posting.Controllers
                 }
                 else
                 {
-                    ViewBag.Msg = "Update Failed";
+                    ViewBag.Msg = "Information is invalid....";
                 }
             }
             catch (Exception e)
@@ -150,18 +150,6 @@ namespace Student_Design_Posting.Controllers
         }
 
         //2. UPDATE to join
-        private List<DesignStudent> designStudentList()
-        {
-            var list = (from d in db.Design
-                        join s in db.Student on d.StudentId equals s.StudentId
-                        where s.StudentId.Equals(HttpContext.Session.GetString("studentid")) //check student
-                        select new DesignStudent
-                        {
-                            Design = d,
-                            Student = s
-                        }).ToList();
-            return list;
-        }
         //UPLOAD   
         public IActionResult Upload(int id)
         {
